@@ -1,9 +1,8 @@
 set encoding=utf-8
-
-" {{{
 set fileencoding=utf-8
 scriptencoding utf-8
 
+" {{{
 set noundofile
 set noswapfile
 set nobackup
@@ -21,7 +20,7 @@ set nocindent
 set foldmethod=marker
 " }}}
 
-" vim-plug {{{1
+" vim-plug {{{
 function! BuildVimProc(info)
   if a:info.status == 'unchanged'
     return
@@ -51,7 +50,7 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 Plug 'cocopon/iceberg.vim'
 
 call plug#end()
-" vim-plug }}}1
+" vim-plug }}}
 
 " newtw {{{
 let g:netrw_liststyle = 3
@@ -59,8 +58,6 @@ let g:netrw_browse_split = 3
 " netrw }}}
 
 " vimshell {{{
-vmap <silent> ,s :VimShellSendString<CR>
-
 " Use current directory as vimshell prompt.
 let g:vimshell_prompt_expr =
 \ 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
@@ -68,8 +65,7 @@ let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
 " vimshell }}}
 
 " filetypes {{{
-" TODO <filetype>.vim?
-augroup javascript
+augroup JavaScript
   autocmd!
   autocmd FileType javascript setlocal shiftwidth=2
   autocmd FileType javascript setlocal softtabstop=2
@@ -93,4 +89,5 @@ inoremap <C-Space> <C-x><C-n>
 inoremap <C-l> <C-x><C-o>
 
 inoremap <C-N> <C-X><C-N>
+vmap <silent> ,s :VimShellSendString<CR>
 " key mappings }}}
