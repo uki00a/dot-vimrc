@@ -18,6 +18,8 @@ set autoindent
 set smartindent
 set nocindent
 set foldmethod=marker
+set vb t_vb=
+set novisualbell
 " }}}
 
 " vim-plug {{{
@@ -67,16 +69,12 @@ let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
 " filetypes {{{
 augroup JavaScript
   autocmd!
-  autocmd FileType javascript setlocal shiftwidth=2
-  autocmd FileType javascript setlocal softtabstop=2
-  autocmd FileType javascript setlocal tabstop=2
+  autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
 augroup END
 
 augroup C
   autocmd!
-  autocmd FileType c,cpp setlocal shiftwidth=2
-  autocmd FileType c,cpp setlocal softtabstop=2
-  autocmd FileType c,cpp setlocal tabstop=2
+  autocmd FileType c,cpp setlocal shiftwidth=2 softtabstop=2 tabstop=2
 augroup END
 " filetypes }}}
 
