@@ -22,6 +22,10 @@ set vb t_vb=
 set novisualbell
 " }}}
 
+" global {{{
+let g:vim_indent_cont = 2
+" global }}}
+
 " vim-plug {{{
 function! BuildVimProc(info)
   if a:info.status == 'unchanged'
