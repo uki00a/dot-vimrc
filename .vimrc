@@ -93,5 +93,5 @@ inoremap <C-Space> <C-x><C-n>
 inoremap <C-l> <C-x><C-o>
 
 inoremap <C-N> <C-X><C-N>
-vmap <silent> ,s :VimShellSendString<CR>
+vmap <silent> <Leader>s :VimShellSendString<CR>
 " key mappings }}}
