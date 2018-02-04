@@ -23,7 +23,7 @@ set novisualbell
 " }}}
 
 " global {{{
-let g:mapleader = '\<Space>'
+let g:mapleader = "\<Space>"
 let g:vim_indent_cont = 2
 " global }}}
 
