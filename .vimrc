@@ -23,6 +23,7 @@ set novisualbell
 " }}}
 
 " global {{{
+let g:mapleader = '\<Space>'
 let g:vim_indent_cont = 2
 " global }}}
 
@@ -85,7 +86,7 @@ augroup END
 
 " key mappings {{{
 nnoremap [unite] <Nop>
-nmap <Space>u [unite]
+nmap <Leader>u [unite]
 nnoremap <silent> [unite]f :<C-u>Unite file<CR>
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 inoremap <C-Space> <C-x><C-n>
