@@ -2,6 +2,10 @@ set encoding=utf-8
 set fileencoding=utf-8
 scriptencoding utf-8
 
+if &compatible
+  set nocompatible
+endif
+
 " {{{
 set noundofile
 set noswapfile
@@ -27,12 +31,8 @@ let g:mapleader = "\<Space>"
 let g:vim_indent_cont = 2
 " global }}}
 
-" vim-plug {{{
-function! BuildVimProc(info)
-  if a:info.status == 'unchanged'
-    return
-  endif
-
+" plugins {{{
+function! BuildVimProc()
   if has('win32') || has('win64')
     !tools\\update-dll-mingw
   elseif has('win32unix') 
@@ -44,20 +44,25 @@ function! BuildVimProc(info)
   endif
 endfunction
 
-let s:vimfiles = has('win32') || has('win64') ? 'vimfiles' : '.vim'
+let s:dein_dir = expand('~/.cache/dein')
+let s:dein_repos_dir = expand(s:dein_dir . "/repos/github.com/Shougo/dein.vim")
 
-call plug#begin('~/' . s:vimfiles . '/plugged')
+execute "set runtimepath+=" . s:dein_repos_dir
 
-Plug 'junegunn/vim-plug'
-Plug 'Shougo/vimproc', { 'do': function('BuildVimProc') }
-Plug 'Shougo/unite.vim', { 'on': 'Unite' }
-Plug 'Shougo/vimshell', { 'on': 'VimShell' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
-Plug 'cocopon/iceberg.vim'
-
-call plug#end()
-" vim-plug }}}
+call dein#begin(s:dein_dir)
+call dein#add(s:dein_repos_dir)
+call dein#add('Shougo/vimproc.vim', {
+  \ 'hook_post_update': function('BuildVimProc'),
+  \ 'on_source': ['unite.vim', 'vimshell.vim'] })
+call dein#add('Shougo/unite.vim', { 'on_cmd': 'Unite' })
+call dein#add('Shougo/vimshell.vim', {
+  \ 'on_cmd': ['VimShell', 'VimShellTab'],
+  \ 'depends': 'vimproc.vim' })
+call dein#add('pangloss/vim-javascript', { 'on_ft': 'javascript' })
+call dein#add('mxw/vim-jsx', { 'on_ft': 'javascript.jsx' })
+call dein#add('cocopon/iceberg.vim')
+call dein#end()
+" plugins }}}
 
 " newtw {{{
 let g:netrw_liststyle = 3
