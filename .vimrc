@@ -6,7 +6,7 @@ if &compatible
   set nocompatible
 endif
 
-" {{{
+" options {{{
 set noundofile
 set noswapfile
 set nobackup
@@ -24,7 +24,7 @@ set nocindent
 set foldmethod=marker
 set vb t_vb=
 set novisualbell
-" }}}
+" options }}}
 
 " global {{{
 let g:mapleader = "\<Space>"
