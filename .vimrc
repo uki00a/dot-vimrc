@@ -56,7 +56,7 @@ call dein#add('Shougo/vimproc.vim', {
   \ 'on_source': ['unite.vim', 'vimshell.vim'] })
 call dein#add('Shougo/unite.vim', { 'on_cmd': 'Unite' })
 call dein#add('Shougo/vimshell.vim', {
-  \ 'on_cmd': ['VimShell', 'VimShellTab'],
+  \ 'on_cmd': ['VimShell', 'VimShellTab', 'VimShellExecute'],
   \ 'depends': 'vimproc.vim' })
 call dein#add('pangloss/vim-javascript', { 'on_ft': 'javascript' })
 call dein#add('mxw/vim-jsx', { 'on_ft': 'javascript.jsx' })
