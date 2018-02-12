@@ -24,6 +24,7 @@ set nocindent
 set foldmethod=marker
 set vb t_vb=
 set novisualbell
+set keywordprg=:help
 " options }}}
 
 " global {{{
