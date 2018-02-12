@@ -12,6 +12,7 @@ set noswapfile
 set nobackup
 set viminfo=
 set number
+set ruler
 set showmatch
 set showcmd
 set expandtab
