@@ -97,7 +97,7 @@ augroup END
 " key mappings {{{
 nnoremap [unite] <Nop>
 nmap <Leader>u [unite]
-nnoremap <silent> [unite]f :<C-u>Unite file<CR>
+nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files file<CR>
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 inoremap <C-Space> <C-x><C-n>
 inoremap <C-l> <C-x><C-o>
