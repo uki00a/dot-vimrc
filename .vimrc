@@ -100,6 +100,7 @@ nmap <Leader>u [unite]
 nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files file<CR>
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]t :<C-u>Unite -immediately tab:no-current<CR>
+nnoremap <silent> [unite]g :<C-u>Unite grep -no-quit<CR>
 inoremap <C-Space> <C-x><C-n>
 inoremap <C-l> <C-x><C-o>
 
