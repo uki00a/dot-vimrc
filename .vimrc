@@ -26,6 +26,7 @@ set backspace=indent,eol,start
 set showmatch
 set wildmenu
 set formatoptions+=mM
+set laststatus=2
 set showcmd
 set foldmethod=marker
 set vb t_vb=
