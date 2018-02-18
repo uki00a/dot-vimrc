@@ -25,6 +25,7 @@ set nocindent
 set backspace=indent,eol,start
 set showmatch
 set wildmenu
+set formatoptions+=mM
 set foldmethod=marker
 set vb t_vb=
 set novisualbell
