@@ -96,6 +96,11 @@ augroup JavaScript
   autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
 augroup END
 
+augroup Vimscript 
+  autocmd!
+  autocmd FileType vim setlocal shiftwidth=2 softtabstop=2 tabstop=2
+augroup END
+
 augroup C
   autocmd!
   autocmd FileType c,cpp setlocal shiftwidth=2 softtabstop=2 tabstop=2
