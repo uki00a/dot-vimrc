@@ -71,6 +71,13 @@ call dein#add('Shougo/vimshell.vim', {
 call dein#add('pangloss/vim-javascript', { 'on_ft': 'javascript' })
 call dein#add('mxw/vim-jsx', { 'on_ft': 'javascript.jsx' })
 call dein#add('cocopon/iceberg.vim')
+
+if isdirectory(expand('~/dein_local'))
+  call dein#local(expand('~/dein_local'),
+    \ { 'frozen': 1, 'merged': 0 },
+    \ ['vim*', 'unite-*', 'denite-*', '*.vim'])
+endif
+
 call dein#end()
 
 filetype plugin indent on
