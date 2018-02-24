@@ -71,6 +71,7 @@ if dein#load_state(s:dein_dir)
     \ 'depends': 'vimproc.vim' })
   call dein#add('pangloss/vim-javascript', { 'on_ft': 'javascript' })
   call dein#add('mxw/vim-jsx', { 'on_ft': 'javascript.jsx' })
+  call dein#add('mattn/webapi-vim')
   call dein#add('cocopon/iceberg.vim')
   
   if isdirectory(expand('~/dein_local'))
