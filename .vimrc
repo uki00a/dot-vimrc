@@ -59,26 +59,29 @@ let s:dein_repos_dir = expand(s:dein_dir . "/repos/github.com/Shougo/dein.vim")
 
 execute "set runtimepath+=" . s:dein_repos_dir
 
-call dein#begin(s:dein_dir)
-call dein#add(s:dein_repos_dir)
-call dein#add('Shougo/vimproc.vim', {
-  \ 'hook_post_update': function('BuildVimProc'),
-  \ 'on_source': ['unite.vim', 'vimshell.vim'] })
-call dein#add('Shougo/unite.vim', { 'on_cmd': 'Unite' })
-call dein#add('Shougo/vimshell.vim', {
-  \ 'on_cmd': ['VimShell', 'VimShellTab', 'VimShellExecute', 'VimShellInteractive'],
-  \ 'depends': 'vimproc.vim' })
-call dein#add('pangloss/vim-javascript', { 'on_ft': 'javascript' })
-call dein#add('mxw/vim-jsx', { 'on_ft': 'javascript.jsx' })
-call dein#add('cocopon/iceberg.vim')
-
-if isdirectory(expand('~/dein_local'))
-  call dein#local(expand('~/dein_local'),
-    \ { 'frozen': 1, 'merged': 0 },
-    \ ['vim*', 'unite-*', 'denite-*', '*.vim'])
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+  call dein#add(s:dein_repos_dir)
+  call dein#add('Shougo/vimproc.vim', {
+    \ 'hook_post_update': function('BuildVimProc'),
+    \ 'on_source': ['unite.vim', 'vimshell.vim'] })
+  call dein#add('Shougo/unite.vim', { 'on_cmd': 'Unite' })
+  call dein#add('Shougo/vimshell.vim', {
+    \ 'on_cmd': ['VimShell', 'VimShellTab', 'VimShellExecute', 'VimShellInteractive'],
+    \ 'depends': 'vimproc.vim' })
+  call dein#add('pangloss/vim-javascript', { 'on_ft': 'javascript' })
+  call dein#add('mxw/vim-jsx', { 'on_ft': 'javascript.jsx' })
+  call dein#add('cocopon/iceberg.vim')
+  
+  if isdirectory(expand('~/dein_local'))
+    call dein#local(expand('~/dein_local'),
+      \ { 'frozen': 1, 'merged': 0 },
+      \ ['vim*', 'unite-*', 'denite-*', '*.vim'])
+  endif
+  
+  call dein#end()
+  call dein#save_state()
 endif
-
-call dein#end()
 
 filetype plugin indent on
 syntax enable
