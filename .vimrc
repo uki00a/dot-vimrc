@@ -73,6 +73,10 @@ if dein#load_state(s:dein_dir)
   call dein#add('mxw/vim-jsx', { 'on_ft': 'javascript.jsx' })
   call dein#add('mattn/webapi-vim')
   call dein#add('cocopon/iceberg.vim')
+
+  if has('python3')
+    call dein#add('Shougo/denite.nvim', { 'on_cmd': 'Denite' })
+  endif
   
   if isdirectory(expand('~/dein_local'))
     call dein#local(expand('~/dein_local'),
@@ -121,10 +125,17 @@ augroup END
 " key mappings {{{
 nnoremap [unite] <Nop>
 nmap <Leader>u [unite]
-nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files file<CR>
-nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-nnoremap <silent> [unite]t :<C-u>Unite -immediately tab:no-current<CR>
-nnoremap <silent> [unite]g :<C-u>Unite grep -no-quit<CR>
+if has('python3')
+  nnoremap <silent> [unite]f :<C-u>Denite -buffer-name=files -mode=normal file/rec<CR>
+  nnoremap <silent> [unite]b :<C-u>Denite buffer -mode=normal<CR>
+  nnoremap <silent> [unite]t :<C-u>Denite unite:tab -immediately-1 -mode=normal<CR>
+  nnoremap <silent> [unite]g :<C-u>Denite grep -no-quit<CR>
+else
+  nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files file<CR>
+  nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+  nnoremap <silent> [unite]t :<C-u>Unite -immediately tab:no-current<CR>
+  nnoremap <silent> [unite]g :<C-u>Unite grep -no-quit<CR>
+endif
 inoremap <C-Space> <C-x><C-n>
 inoremap <C-l> <C-x><C-o>
 
