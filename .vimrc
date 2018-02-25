@@ -54,6 +54,15 @@ function! BuildVimProc()
   endif
 endfunction
 
+function! ConfigureDenite()
+	call denite#custom#map(
+	      \ 'insert',
+	      \ '<C-j>',
+	      \ '<denite:move_to_next_line>',
+	      \ 'noremap'
+	      \)
+endfunction
+
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repos_dir = expand(s:dein_dir . "/repos/github.com/Shougo/dein.vim")
 
@@ -75,7 +84,9 @@ if dein#load_state(s:dein_dir)
   call dein#add('cocopon/iceberg.vim')
 
   if has('python3')
-    call dein#add('Shougo/denite.nvim', { 'on_cmd': 'Denite' })
+    call dein#add('Shougo/denite.nvim', {
+      \ 'on_cmd': 'Denite',
+      \ 'hook_source': function('ConfigureDenite') })
   endif
   
   if isdirectory(expand('~/dein_local'))
