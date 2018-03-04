@@ -42,59 +42,17 @@ let g:vim_indent_cont = 2
 " global }}}
 
 " plugins {{{
-function! BuildVimProc()
-  if has('win32') || has('win64')
-    !tools\\update-dll-mingw
-  elseif has('win32unix') 
-    !make -f make_cygwin.mak
-  elseif executable('gmake')
-    !gmake
-  else
-    !make
-  endif
-endfunction
-
-function! ConfigureDenite()
-	call denite#custom#map(
-	      \ 'insert',
-	      \ '<C-j>',
-	      \ '<denite:move_to_next_line>',
-	      \ 'noremap'
-	      \)
-	call denite#custom#map(
-	      \ 'insert',
-	      \ '<C-p>',
-	      \ '<denite:move_to_previous_line>',
-	      \ 'noremap'
-	      \)
-endfunction
-
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repos_dir = expand(s:dein_dir . "/repos/github.com/Shougo/dein.vim")
 
 execute "set runtimepath+=" . s:dein_repos_dir
 
 if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
-  call dein#add(s:dein_repos_dir)
-  call dein#add('Shougo/vimproc.vim', {
-    \ 'hook_post_update': function('BuildVimProc'),
-    \ 'on_source': ['unite.vim', 'vimshell.vim'] })
-  call dein#add('Shougo/unite.vim', { 'on_cmd': 'Unite' })
-  call dein#add('Shougo/vimshell.vim', {
-    \ 'on_cmd': ['VimShell', 'VimShellTab', 'VimShellExecute', 'VimShellInteractive'],
-    \ 'depends': 'vimproc.vim' })
-  call dein#add('pangloss/vim-javascript', { 'on_ft': 'javascript' })
-  call dein#add('mxw/vim-jsx', { 'on_ft': 'javascript.jsx' })
-  call dein#add('mattn/webapi-vim')
-  call dein#add('cocopon/iceberg.vim')
+  let s:vimfiles = expand(has('win32') || has('win64') ? '~/vimfiles' : '~/.vim')
 
-  if has('python3')
-    call dein#add('Shougo/denite.nvim', {
-      \ 'on_cmd': 'Denite',
-      \ 'hook_source': function('ConfigureDenite') })
-  endif
-  
+  call dein#begin(s:dein_dir)
+  call dein#load_toml(s:vimfiles . '/dein.toml')
+
   if isdirectory(expand('~/dein_local'))
     call dein#local(expand('~/dein_local'),
       \ { 'frozen': 1, 'merged': 0 },
