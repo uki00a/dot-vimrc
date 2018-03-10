@@ -73,13 +73,6 @@ let g:netrw_browse_split = 3
 let g:netrw_banner = 0
 " netrw }}}
 
-" vimshell {{{
-" Use current directory as vimshell prompt.
-let g:vimshell_prompt_expr =
-\ 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
-let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
-" vimshell }}}
-
 " filetypes {{{
 augroup JavaScript
   autocmd!
