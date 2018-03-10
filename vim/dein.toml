@@ -26,11 +26,9 @@ depends = 'vimproc.vim'
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
-on_ft = 'javascript'
 
 [[plugins]]
 repo = 'mxw/vim-jsx'
-on_ft = 'javascript.jsx'
 
 [[plugins]]
 repo = 'mattn/webapi-vim'
