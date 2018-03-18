@@ -41,6 +41,11 @@ let g:mapleader = "\<Space>"
 let g:vim_indent_cont = 2
 " global }}}
 
+augroup MyAutoCmd
+  autocmd!
+augroup END
+
+
 " plugins {{{
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repos_dir = expand(s:dein_dir . "/repos/github.com/Shougo/dein.vim")
