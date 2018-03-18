@@ -34,6 +34,8 @@ set foldmethod=marker
 set vb t_vb=
 set novisualbell
 set keywordprg=:help
+set background=dark
+set guioptions-=T
 " options }}}
 
 " global {{{

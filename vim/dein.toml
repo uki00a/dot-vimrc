@@ -40,6 +40,7 @@ repo = 'mattn/webapi-vim'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
+hook_add = 'autocmd MyAutoCmd VimEnter * nested colorscheme iceberg'
 
 [[plugins]]
 if = "has('python3')"
