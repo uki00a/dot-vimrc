@@ -17,7 +17,7 @@ hook_post_update = '''
 '''
 [[plugins]]
 repo = 'Shougo/unite.vim'
-on_cmd = 'Unite'
+on_cmd = ['Unite', 'UniteWithCursorWord']
 
 [[plugins]]
 repo = 'Shougo/vimshell.vim'
