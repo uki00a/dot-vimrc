@@ -80,7 +80,7 @@ let g:netrw_browse_split = 3
 let g:netrw_banner = 0
 " netrw }}}
 
-" filetypes {{{
+" augroups {{{
 augroup JavaScript
   autocmd!
   autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
@@ -100,7 +100,7 @@ augroup Python
   autocmd!
   autocmd FileType python setlocal shiftwidth=4 softtabstop=4 tabstop=4
 augroup END
-" filetypes }}}
+" augroups }}}
 
 " key mappings {{{
 nnoremap [unite] <Nop>
