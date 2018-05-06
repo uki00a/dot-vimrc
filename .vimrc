@@ -100,6 +100,12 @@ augroup Python
   autocmd!
   autocmd FileType python setlocal shiftwidth=4 softtabstop=4 tabstop=4
 augroup END
+
+augroup Ruby
+  autocmd!
+  autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
+  autocmd FileType ruby if !exists('g:loaded_matchit') | runtime! macros/matchit.vim | endif
+augroup END
 " augroups }}}
 
 " key mappings {{{
