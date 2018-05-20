@@ -2,32 +2,8 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-on_source = ['unite.vim', 'vimshell.vim']
-hook_post_update = '''
-  if has('win32') || has('win64')
-    !tools\\update-dll-mingw
-  elseif has('win32unix') 
-    !make -f make_cygwin.mak
-  elseif executable('gmake')
-    !gmake
-  else
-    !make
-  endif
-'''
-[[plugins]]
 repo = 'Shougo/unite.vim'
 on_cmd = ['Unite', 'UniteWithCursorWord']
-
-[[plugins]]
-repo = 'Shougo/vimshell.vim'
-on_cmd = ['VimShell', 'VimShellTab', 'VimShellExecute', 'VimShellInteractive']
-depends = 'vimproc.vim'
-hook_source = '''
-  let g:vimshell_prompt_expr =
-  \ 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
-  let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
-'''
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
@@ -45,48 +21,12 @@ repo = 'cocopon/iceberg.vim'
 '''
 
 [[plugins]]
-if = "has('python3')"
-repo = 'Shougo/denite.nvim'
-on_cmd = 'Denite'
-depends = 'unite.vim'
-hook_source = '''
-	call denite#custom#map(
-	  \ 'insert',
-	  \ '<C-j>',
-	  \ '<denite:move_to_next_line>',
-	  \ 'noremap'
-	  \)
-	call denite#custom#map(
-	  \ 'insert',
-	  \ '<C-p>',
-	  \ '<denite:move_to_previous_line>',
-	  \ 'noremap'
-	  \)
-
-  let s:menus = {}
-  let s:menus.vim = {
-    \ 'description': 'Vim'
-    \ }
-  " TODO dein.toml
-  let s:menus.vim.file_candidates = [
-  \   ['vimrc', $MYVIMRC]
-  \ ]
-
-  call denite#custom#var('menu', 'menus', s:menus)
-'''
-
-[[plugins]]
 repo = 'glidenote/memolist.vim'
 on_cmd = ['MemoList', 'MemoNew']
 hook_source = '''
   let g:memolist_memo_suffix = 'md'
   let g:memolist_filename_prefix_none = 1
-  if has('python3')
-    let g:memolist_denite = 1
-    let g:memolist_denite_option = '-mode=normal -buffer-name=files'
-  else
-    let g:memolist_unite = 1
-    let g:memolist_unite_option = '-buffer-name=files'
-  endif
+  let g:memolist_unite = 1
+  let g:memolist_unite_option = '-buffer-name=files'
 '''
 

@@ -111,21 +111,13 @@ augroup END
 " key mappings {{{
 nnoremap [unite] <Nop>
 nmap <Leader>u [unite]
-if has('python3')
-  nnoremap <silent> [unite]f :<C-u>Denite -buffer-name=files -mode=normal file/rec<CR>
-  nnoremap <silent> [unite]b :<C-u>Denite buffer -mode=normal<CR>
-  nnoremap <silent> [unite]t :<C-u>Denite unite:tab -immediately-1 -mode=normal<CR>
-  nnoremap <silent> [unite]g :<C-u>Denite grep -no-quit<CR>
-  nnoremap <silent> [unite]r :<C-u>Denite register -mode=normal -buffer-name=register<CR>
-  nnoremap <silent> [unite]l :<C-u>DeniteCursorWord line -mode=normal -buffer-name=search<CR>
-else
-  nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files file<CR>
-  nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-  nnoremap <silent> [unite]t :<C-u>Unite -immediately tab:no-current<CR>
-  nnoremap <silent> [unite]g :<C-u>Unite grep -no-quit<CR>
-  nnoremap <silent> [unite]r :<C-u>Unite register -buffer-name=register<CR>
-  nnoremap <silent> [unite]l :<C-u>UniteWithCursorWord line -buffer-name=search<CR>
-endif
+
+nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files file<CR>
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]t :<C-u>Unite -immediately tab:no-current<CR>
+nnoremap <silent> [unite]g :<C-u>Unite grep -no-quit<CR>
+nnoremap <silent> [unite]r :<C-u>Unite register -buffer-name=register<CR>
+nnoremap <silent> [unite]l :<C-u>UniteWithCursorWord line -buffer-name=search<CR>
 inoremap <C-Space> <C-x><C-n>
 inoremap <C-l> <C-x><C-o>
 
