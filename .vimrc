@@ -23,6 +23,8 @@ set autoindent
 set smartindent
 set nocindent
 set backspace=indent,eol,start
+set hlsearch
+set incsearch
 set showmatch
 set wildmenu
 set formatoptions+=mM
