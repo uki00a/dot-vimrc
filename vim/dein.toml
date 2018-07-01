@@ -6,13 +6,14 @@ repo = 'Shougo/unite.vim'
 on_cmd = ['Unite', 'UniteWithCursorWord']
 
 [[plugins]]
+repo = 'Shougo/deol.nvim'
+on_cmd = 'Deol'
+
+[[plugins]]
 repo = 'pangloss/vim-javascript'
 
 [[plugins]]
 repo = 'mxw/vim-jsx'
-
-[[plugins]]
-repo = 'mattn/webapi-vim'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
