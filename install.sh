@@ -6,5 +6,6 @@ vimfiles=$script_dir/vim
 
 ln -s $vimrc $HOME/.vimrc
 ln -s $vimfiles $HOME/.vim
+ln -s $vimfiles ~/.config/nvim
 
 
