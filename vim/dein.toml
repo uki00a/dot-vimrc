@@ -32,4 +32,7 @@ hook_source = '''
 '''
 
 [[plugins]]
+repo = 'https://github.com/kana/vim-metarw'
+
+[[plugins]]
 repo = 'mattn/webapi-vim'
