@@ -31,3 +31,5 @@ hook_source = '''
   let g:memolist_unite_option = '-buffer-name=files'
 '''
 
+[[plugins]]
+repo = 'mattn/webapi-vim'
