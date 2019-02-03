@@ -1,0 +1,5 @@
+{
+  "taskbookDirectory": "~/.cache/taskbook",
+  "displayCompleteTasks": true,
+  "displayProgressOverview": true
+}
