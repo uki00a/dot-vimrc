@@ -60,10 +60,10 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml(fnamemodify(expand('<sfile>'), ':h') . '/dein.toml')
 
-  if isdirectory(expand('~/dein_local'))
-    call dein#local(expand('~/dein_local'),
+  if isdirectory(expand('~/.local/share/dein'))
+    call dein#local(expand('~/.local/share/dein'),
       \ { 'frozen': 1, 'merged': 0 },
-      \ ['vim*', 'unite-*', 'denite-*', '*.vim'])
+      \ ['vim*', '*-vim', 'unite-*', 'denite-*', '*.vim'])
   endif
   
   call dein#end()
