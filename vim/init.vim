@@ -108,6 +108,12 @@ augroup Ruby
 augroup END
 " augroups }}}
 
+" terminal {{{
+if has('terminal')
+  set termkey=<C-_>
+endif
+" terminal }}}
+
 " key mappings {{{
 nnoremap [unite] <Nop>
 nmap <Leader>u [unite]
