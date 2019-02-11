@@ -56,7 +56,7 @@ let s:dein_repos_dir = expand(s:dein_dir . "/repos/github.com/Shougo/dein.vim")
 
 execute "set runtimepath+=" . s:dein_repos_dir
 
-if dein#load_state(s:dein_dir)
+if isdirectory(s:dein_repos_dir) && dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml(fnamemodify(expand('<sfile>'), ':h') . '/dein.toml')
 
