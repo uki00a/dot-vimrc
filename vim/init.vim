@@ -81,6 +81,10 @@ let g:netrw_banner = 0
 " netrw }}}
 
 " augroups {{{
+function! s:load_matchit()
+  if !exists('g:loaded_matchit') | runtime! macros/matchit.vim | endif
+endfunction
+
 augroup JavaScript
   autocmd!
   autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
@@ -104,7 +108,7 @@ augroup END
 augroup Ruby
   autocmd!
   autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
-  autocmd FileType ruby if !exists('g:loaded_matchit') | runtime! macros/matchit.vim | endif
+  autocmd FileType ruby call s:load_matchit()
 augroup END
 " augroups }}}
 
