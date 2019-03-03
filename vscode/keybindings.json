@@ -1,0 +1,27 @@
+[
+    { "key": "ctrl+h", "command": "deleteLeft", "when": "editorTextFocus" },
+    { "key": "ctrl+n", "command": "cursorDown", "when": "editorTextFocus" },
+    { "key": "ctrl+p", "command": "cursorUp", "when": "editorTextFocus" },
+    { "key": "ctrl+l", "command": "actions.find" },
+    { "key": "ctrl+r", "command": "editor.action.startFindReplaceAction" },
+    { "key": "ctrl+shift+h", "command": "workbench.action.focusPreviousGroup" },
+    { "key": "ctrl+shift+l", "command": "workbench.action.focusNextGroup" },
+    { "key": "ctrl+t", "command": "workbench.action.terminal.toggleTerminal" },
+    { "key": "ctrl+b", "command": "workbench.action.toggleSidebarVisibility" },
+    { "key": "ctrl+w", "command": "workbench.action.navigateEditorGroups" },
+    { "key": "ctrl+n", "command": "workbench.action.quickOpenNavigateNext",
+      "when": "inQuickOpen" },
+    { "key": "ctrl+p", "command": "workbench.action.quickOpenNavigatePrevious",
+      "when": "inQuickOpen" },
+    { "key": "ctrl+i", "command": "insertSnippet",
+      "when": "config.editor.tabCompletion && editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus"  },
+    { "key": "ctrl+q", "command": "workbench.action.closeActiveEditor" },
+    {
+      "key": "ctrl+u",
+      "command": "workbench.action.quickOpen"
+    },
+    {
+      "key": "ctrl+shift+t",
+      "command": "workbench.action.tasks.runTask"
+    }
+  ]
