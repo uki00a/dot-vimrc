@@ -114,7 +114,9 @@ augroup END
 
 " terminal {{{
 if has('terminal')
-  set termkey=<C-_>
+  if exists('+termkey')
+    set termkey=<C-_>
+  endif
 endif
 " terminal }}}
 
