@@ -37,3 +37,8 @@ hook_source = 'call SourceMyRC("memolist.vim")'
 repo = 'w0rp/ale'
 on_cmd = ['ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
 hook_source = 'call SourceMyRC("ale.vim")'
+
+[[plugins]]
+repo = 'janko-m/vim-test'
+on_cmd = ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit']
+hook_source = 'call SourceMyRC("vim-test.vim")'
