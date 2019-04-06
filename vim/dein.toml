@@ -30,9 +30,3 @@ hook_source = '''
   let g:memolist_unite = 1
   let g:memolist_unite_option = '-buffer-name=files'
 '''
-
-[[plugins]]
-repo = 'https://github.com/kana/vim-metarw'
-
-[[plugins]]
-repo = 'mattn/webapi-vim'
