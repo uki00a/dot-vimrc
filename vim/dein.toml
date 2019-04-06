@@ -1,3 +1,10 @@
+hook_add = '''
+function! SourceMyRC(rc_file) abort
+  let path = fnamemodify($MYVIMRC, ':h') . '/plugins/' . a:rc_file
+  execute 'source ' . path
+endfunction
+'''
+
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
@@ -24,19 +31,9 @@ repo = 'cocopon/iceberg.vim'
 [[plugins]]
 repo = 'glidenote/memolist.vim'
 on_cmd = ['MemoList', 'MemoNew']
-hook_source = '''
-  let g:memolist_memo_suffix = 'md'
-  let g:memolist_filename_prefix_none = 1
-  let g:memolist_unite = 1
-  let g:memolist_unite_option = '-buffer-name=files'
-'''
+hook_source = 'call SourceMyRC("memolist.vim")'
 
 [[plugins]]
 repo = 'w0rp/ale'
 on_cmd = ['ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
-hook_source = '''
-  let g:ale_linters_explicit = 1
-  let g:ale_linters = {
-    \   'javascript': ['eslint']
-    \ }
-'''
+hook_source = 'call SourceMyRC("ale.vim")'
