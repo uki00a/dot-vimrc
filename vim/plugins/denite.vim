@@ -14,8 +14,8 @@ let s:menus = {}
 let s:menus.vim = {
   \ 'description': 'Vim'
   \ }
-" TODO dein.toml
 let s:menus.vim.file_candidates = [
-\   ['vimrc', $MYVIMRC]
+\   ['vimrc', $MYVIMRC],
+\   ['dein.toml', fnamemodify($MYVIMRC, ':h') . '/dein.toml']
 \ ]
 call denite#custom#var('menu', 'menus', s:menus)
