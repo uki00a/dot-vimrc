@@ -129,7 +129,10 @@ endif
 
 " key mappings {{{
 nnoremap [unite] <Nop>
+nnoremap [vim-test] <Nop>
+
 nmap <Leader>u [unite]
+nmap <Leader>t [vim-test]
 
 nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files file<CR>
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
@@ -137,9 +140,15 @@ nnoremap <silent> [unite]t :<C-u>Unite -immediately tab:no-current<CR>
 nnoremap <silent> [unite]g :<C-u>Unite grep -no-quit<CR>
 nnoremap <silent> [unite]r :<C-u>Unite register -buffer-name=register<CR>
 nnoremap <silent> [unite]l :<C-u>UniteWithCursorWord line -buffer-name=search<CR>
+
+nnoremap <silent> [vim-test]n :<C-u>TestNearest<CR>
+nnoremap <silent> [vim-test]f :<C-u>TestFile<CR>
+nnoremap <silent> [vim-test]s :<C-u>TestSuite<CR>
+nnoremap <silent> [vim-test]l :<C-u>TestLast<CR>
+nnoremap <silent> [vim-test]v :<C-u>TestVisit<CR>
+
 inoremap <C-Space> <C-x><C-n>
 inoremap <C-l> <C-x><C-o>
 
 inoremap <C-N> <C-X><C-N>
-vmap <silent> <Leader>s :VimShellSendString<CR>
 " key mappings }}}
