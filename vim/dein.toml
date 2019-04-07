@@ -13,6 +13,21 @@ repo = 'Shougo/unite.vim'
 on_cmd = ['Unite', 'UniteWithCursorWord']
 
 [[plugins]]
+if = "has('python3')"
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
+depends = ['unite.vim']
+hook_source = 'call SourceMyRC("denite.vim")'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+on_source = 'denite.nvim'
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+on_source = 'vim-hug-neovim-rpc'
+
+[[plugins]]
 repo = 'Shougo/deol.nvim'
 on_cmd = 'Deol'
 
