@@ -11,12 +11,12 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/unite.vim'
 on_cmd = ['Unite', 'UniteWithCursorWord']
+hook_source = 'call SourceMyRC("unite.vim")'
 
 [[plugins]]
 if = "has('python3')"
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
-depends = ['unite.vim']
 hook_source = 'call SourceMyRC("denite.vim")'
 
 [[plugins]]
