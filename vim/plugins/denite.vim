@@ -11,11 +11,11 @@ call denite#custom#map(
   \ 'noremap'
   \)
 let s:menus = {}
-let s:menus.vim = {
-  \ 'description': 'Vim'
+let s:menus.shortcut = {
+  \ 'description': 'Shortcut'
   \ }
-let s:menus.vim.file_candidates = [
-\   ['vimrc', $MYVIMRC],
+let s:menus.shortcut.file_candidates = [
+\   ['init.vim', $MYVIMRC],
 \   ['dein.toml', fnamemodify($MYVIMRC, ':h') . '/dein.toml']
 \ ]
 call denite#custom#var('menu', 'menus', s:menus)

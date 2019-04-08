@@ -1,7 +1,7 @@
 let g:unite_source_menu_menus = {}
 
 let g:unite_source_menu_menus.shortcut = {
-  \ 'description': 'vim'
+  \ 'description': 'Shortcut'
   \}
 
 let g:unite_source_menu_menus.shortcut.candidates = [
