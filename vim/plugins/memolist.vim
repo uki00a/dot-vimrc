@@ -1,7 +1,7 @@
 let g:memolist_memo_suffix = 'md'
 let g:memolist_filename_prefix_none = 1
 
-if has('python3')
+if exists(':Denite')
   let g:memolist_denite = 1
   let g:memolist_denite_option = '-mode=normal -buffer-name=files'
 else
