@@ -124,6 +124,10 @@ if has('terminal')
   if exists('+termkey')
     set termkey=<C-_>
   endif
+
+  if has('win32') || has('win64')
+    set shell=powershell.exe
+  endif
 endif
 " terminal }}}
 
