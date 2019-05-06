@@ -1,3 +1,8 @@
+if executable('ag')
+  call denite#custom#var('file/rec', 'command',
+    \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+endif
+
 call denite#custom#map(
   \ 'insert',
   \ '<C-j>',
