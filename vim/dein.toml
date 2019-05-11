@@ -10,7 +10,7 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/unite.vim'
-on_cmd = ['Unite', 'UniteWithCursorWord']
+on_cmd = ['Unite', 'UniteWithCursorWord', 'UniteWithBufferDir']
 hook_source = 'call SourceMyRC("unite.vim")'
 
 [[plugins]]
