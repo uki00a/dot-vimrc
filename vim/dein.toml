@@ -11,18 +11,18 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/unite.vim'
 on_cmd = ['Unite', 'UniteWithCursorWord', 'UniteWithBufferDir']
-hook_source = 'call SourceMyRC("unite.vim")'
+hook_source = 'call SourceMyRC("unite.rc.vim")'
 
 [[plugins]]
 if = "has('python3') && has('nvim')"
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
-hook_source = 'call SourceMyRC("denite.vim")'
-depends = ['deol.nvim']
+hook_source = 'call SourceMyRC("denite.rc.vim")'
 
 [[plugins]]
 repo = 'Shougo/deol.nvim'
 on_cmd = 'Deol'
+on_source = 'denite.nvim'
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
@@ -34,7 +34,7 @@ repo = 'mxw/vim-jsx'
 repo = 'l04m33/vlime'
 on_ft = 'lisp'
 rtp = 'vim'
-hook_source = 'call SourceMyRC("vlime.vim")'
+hook_source = 'call SourceMyRC("vlime.rc.vim")'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
@@ -45,14 +45,14 @@ repo = 'cocopon/iceberg.vim'
 [[plugins]]
 repo = 'glidenote/memolist.vim'
 on_cmd = ['MemoList', 'MemoNew']
-hook_source = 'call SourceMyRC("memolist.vim")'
+hook_source = 'call SourceMyRC("memolist.rc.vim")'
 
 [[plugins]]
 repo = 'w0rp/ale'
 on_cmd = ['ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
-hook_source = 'call SourceMyRC("ale.vim")'
+hook_source = 'call SourceMyRC("ale.rc.vim")'
 
 [[plugins]]
 repo = 'janko-m/vim-test'
 on_cmd = ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit']
-hook_source = 'call SourceMyRC("vim-test.vim")'
+hook_source = 'call SourceMyRC("vim-test.rc.vim")'
