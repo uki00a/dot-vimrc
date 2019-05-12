@@ -23,6 +23,7 @@ hook_source = 'call SourceMyRC("denite.rc.vim")'
 repo = 'Shougo/deol.nvim'
 on_cmd = 'Deol'
 on_source = 'denite.nvim'
+hook_source = 'call SourceMyRC("deol.rc.vim")'
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
