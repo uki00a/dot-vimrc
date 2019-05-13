@@ -21,6 +21,7 @@ let s:menus.shortcut = {
   \ }
 let s:menus.shortcut.file_candidates = [
 \   ['init.vim', $MYVIMRC],
-\   ['dein.toml', fnamemodify($MYVIMRC, ':h') . '/dein.toml']
+\   ['dein.toml', fnamemodify($MYVIMRC, ':h') . '/dein.toml'],
+\   ['dein.toml (local)', expand('~/.local/share/dein/dein.toml')]
 \ ]
 call denite#custom#var('menu', 'menus', s:menus)
