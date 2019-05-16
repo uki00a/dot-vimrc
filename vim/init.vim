@@ -119,6 +119,10 @@ augroup Ruby
 augroup END
 " augroups }}}
 
+" autocmds {{{
+autocmd BufRead,BufNewFile *.cshtml set filetype=html
+" autocmds }}}
+
 " terminal {{{
 if has('terminal')
   if exists('+termkey')
