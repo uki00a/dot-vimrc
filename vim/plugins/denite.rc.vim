@@ -6,6 +6,13 @@ endif
 call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
 call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
 
+call denite#custom#option('default', {
+  \   'prompt': '>',
+  \   'source_names': 'short',
+  \   'split': has('nvim') ? 'floating' : 'horizontal',
+  \   'auto_accel': v:true
+  \ })
+
 let s:menus = {}
 let s:menus.shortcut = {
   \ 'description': 'Shortcut'
