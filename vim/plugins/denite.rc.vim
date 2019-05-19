@@ -15,6 +15,8 @@ call denite#custom#map(
   \ '<denite:move_to_previous_line>',
   \ 'noremap'
   \)
+call denite#custom#map('insert', '<C-[>', '<denite:enter_mode:normal>', 'noremap')
+
 let s:menus = {}
 let s:menus.shortcut = {
   \ 'description': 'Shortcut'
