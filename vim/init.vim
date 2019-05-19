@@ -100,6 +100,7 @@ augroup END
 augroup Vimscript 
   autocmd!
   autocmd FileType vim setlocal shiftwidth=2 softtabstop=2 tabstop=2
+  autocmd FileType vim call s:load_matchit()
 augroup END
 
 augroup C
