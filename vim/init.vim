@@ -118,11 +118,12 @@ augroup Ruby
   autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
   autocmd FileType ruby call s:load_matchit()
 augroup END
-" augroups }}}
 
-" autocmds {{{
-autocmd BufRead,BufNewFile *.cshtml set filetype=html
-" autocmds }}}
+augroup CSharp
+  autocmd!
+  autocmd BufRead,BufNewFile *.cshtml set filetype=html
+augroup END
+" augroups }}}
 
 " terminal {{{
 if has('terminal')
