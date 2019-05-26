@@ -141,7 +141,7 @@ endif
 nnoremap [unite] <Nop>
 nnoremap [vim-test] <Nop>
 
-nmap <Leader>u [unite]
+nmap <Leader>f [unite]
 nmap <Leader>t [vim-test]
 
 if exists(':Denite')
