@@ -7,3 +7,5 @@
 zsh-completions
 node_modules
 vendor
+yarn.lock
+package-lock.json
