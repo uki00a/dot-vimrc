@@ -9,6 +9,22 @@ endfunction
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'Shougo/vimproc.vim'
+on_source = 'unite.vim'
+hook_add = '''
+let s:is_windows = has("win32") || has("win64")
+let g:vimproc#download_windows_dll = s:is_windows
+if !s:is_windows
+  let g:dein#plugin.build = 'make'
+endif
+'''
+hook_post_update = '''
+if !g:vimproc#download_windows_dll
+  call dein#build('vimproc.vim')
+endif
+'''
+
+[[plugins]]
 repo = 'Shougo/unite.vim'
 on_cmd = ['Unite', 'UniteWithCursorWord', 'UniteWithBufferDir']
 hook_source = 'call SourceMyRC("unite.rc.vim")'
