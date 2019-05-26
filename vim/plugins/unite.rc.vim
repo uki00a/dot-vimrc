@@ -6,7 +6,8 @@ let g:unite_source_menu_menus.shortcut = {
 
 let g:unite_source_menu_menus.shortcut.candidates = [
   \ ['init.vim', $MYVIMRC],
-  \ ['dein.toml', fnamemodify($MYVIMRC, ':h') . '/dein.toml']
+  \ ['dein.toml', fnamemodify($MYVIMRC, ':h') . '/dein.toml'],
+  \ ['dein.toml (local)', expand('~/.local/share/dein/dein.toml')]
   \]
 
 function! g:unite_source_menu_menus.shortcut.map(key, value) abort
