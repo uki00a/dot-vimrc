@@ -6,6 +6,16 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
+
+let g:unite_ignore_source_files = [
+  \   'function.vim',
+  \   'command.vim',
+  \   'process.vim',
+  \   'window.vim',
+  \   'vimgrep.vim',
+  \   'script.vim',
+  \   'launcher.vim'
+  \ ]
 let g:unite_source_menu_menus = {}
 
 let g:unite_source_menu_menus.shortcut = {
