@@ -154,7 +154,7 @@ if exists(':Denite')
   nnoremap <silent> [unite]m :<C-u>Denite menu -mode=normal<CR>
   nnoremap <silent> [unite]c :<C-u>Denite command_history -mode=normal<CR>
 else
-  nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+  nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files file_rec/async<CR>
   nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
   nnoremap <silent> [unite]t :<C-u>Unite -immediately tab:no-current<CR>
   nnoremap <silent> [unite]g :<C-u>Unite grep -no-quit<CR>
