@@ -1,3 +1,7 @@
+if executable('ag')
+  let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '-g', '']
+endif
+
 let g:unite_source_menu_menus = {}
 
 let g:unite_source_menu_menus.shortcut = {
