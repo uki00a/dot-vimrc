@@ -48,6 +48,10 @@ repo = 'pangloss/vim-javascript'
 repo = 'mxw/vim-jsx'
 
 [[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_source = 'let let g:typescript_indent_disable = 1'
+
+[[plugins]]
 repo = 'l04m33/vlime'
 on_ft = 'lisp'
 rtp = 'vim'
