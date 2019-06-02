@@ -49,8 +49,11 @@ repo = 'mxw/vim-jsx'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
-hook_add = 'let g:typescript_indent_disable = 1'
 
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_ft = 'typescript'
+hook_source = 'call SourceMyRC("tsuquyomi.rc.vim")'
 
 [[plugins]]
 repo = 'l04m33/vlime'
