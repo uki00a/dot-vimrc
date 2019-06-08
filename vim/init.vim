@@ -175,8 +175,6 @@ nnoremap <silent> [vim-test]s :<C-u>TestSuite<CR>
 nnoremap <silent> [vim-test]l :<C-u>TestLast<CR>
 nnoremap <silent> [vim-test]v :<C-u>TestVisit<CR>
 
-inoremap <C-Space> <C-x><C-n>
-inoremap <C-l> <C-x><C-o>
-
-inoremap <C-N> <C-X><C-N>
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-n> <C-x><C-n>
 " key mappings }}}
