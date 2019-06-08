@@ -100,6 +100,7 @@ augroup END
 augroup TypeScript
   autocmd!
   autocmd FileType typescript :imap <buffer> <C-Space> <Plug>(ale_complete)
+  autocmd FileType typescript :map <buffer> <C-]> <Plug>(ale_go_to_definition)
 augroup END
 
 augroup Vimscript 
