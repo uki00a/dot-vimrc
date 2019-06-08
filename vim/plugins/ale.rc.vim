@@ -4,3 +4,7 @@ let g:ale_linters = {
   \   'vue': ['eslint']
   \ }
 let g:ale_lint_delay = 1000
+
+if has('win32') || has('win64')
+  let g:ale_shell = 'cmd.exe'
+endif
