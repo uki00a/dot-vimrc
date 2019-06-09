@@ -3,5 +3,6 @@
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
     "extensions.autoUpdate": false,
+    "breadcrumbs.enabled": false,
     "workbench.colorTheme": "Solarized Dark"
 }
