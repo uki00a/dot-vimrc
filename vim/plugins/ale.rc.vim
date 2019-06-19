@@ -1,6 +1,6 @@
 let g:ale_linters_explicit = 1
 let g:ale_linters = {
-  \   'javascript': ['eslint'],
+  \   'javascript': executable('tsserver') ? ['eslint', 'tsserver'] : ['eslint'],
   \   'typescript': ['tsserver', 'eslint'],
   \   'vue': ['eslint']
   \ }
