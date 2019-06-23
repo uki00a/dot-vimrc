@@ -96,6 +96,7 @@ augroup JavaScript
   autocmd!
   autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
   autocmd FileType javascript :imap <buffer> <C-Space> <Plug>(ale_complete)
+  autocmd FileType javascript :map <buffer> <C-]> <Plug>(ale_go_to_definition)
 augroup END
 
 augroup TypeScript
