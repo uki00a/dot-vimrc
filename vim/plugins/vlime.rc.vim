@@ -2,8 +2,6 @@ let g:vlime_leader = ","
 let g:vlime_cl_use_terminal = v:true
 let g:vlime_cl_impl = "ros"
 function! VlimeBuildServerCommandFor_ros(vlime_loader, vlime_eval) abort
-  if 1
-  endif
   return ["ros", "run", "--",
      \ "--load", a:vlime_loader,
      \ "--eval", a:vlime_eval]
