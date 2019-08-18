@@ -81,3 +81,7 @@ hook_source = 'call SourceMyRC("ale.rc.vim")'
 repo = 'janko-m/vim-test'
 on_cmd = ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit']
 hook_source = 'call SourceMyRC("vim-test.rc.vim")'
+
+[[plugins]]
+repo = 'benmills/vimux'
+on_func = ['VimuxRunCommand']
