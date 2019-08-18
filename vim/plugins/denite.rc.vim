@@ -22,4 +22,11 @@ let s:menus.shortcut.file_candidates = [
 \   ['dein.toml', fnamemodify($MYVIMRC, ':h') . '/dein.toml'],
 \   ['dein.toml (local)', expand('~/.local/share/dein/dein.toml')]
 \ ]
+
+let s:menus.tools = { 'description': 'Tools' }
+let s:menus.tools.command_candidates = [
+\   ['vlime: run server', 'call VlimeStartServer()'],
+\   ['dein: clear state', 'call dein#clear_state()']
+\ ]
+
 call denite#custom#var('menu', 'menus', s:menus)
