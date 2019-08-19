@@ -84,4 +84,5 @@ hook_source = 'call SourceMyRC("vim-test.rc.vim")'
 
 [[plugins]]
 repo = 'benmills/vimux'
-on_func = ['VimuxRunCommand']
+on_func = ['VimuxRunCommand', 'VimuxOpenRunner']
+hook_source = 'let g:VimuxUseNearest = 0'
