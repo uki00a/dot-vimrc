@@ -6,6 +6,7 @@
 .svn
 zsh-completions
 node_modules
+quicklisp
 vendor
 yarn.lock
 package-lock.json
