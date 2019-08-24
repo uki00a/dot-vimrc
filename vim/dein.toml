@@ -51,11 +51,6 @@ repo = 'mxw/vim-jsx'
 repo = 'leafgarland/typescript-vim'
 
 [[plugins]]
-repo = 'Quramy/tsuquyomi'
-on_ft = 'typescript'
-hook_source = 'call SourceMyRC("tsuquyomi.rc.vim")'
-
-[[plugins]]
 repo = 'l04m33/vlime'
 on_ft = 'lisp'
 rtp = 'vim'
