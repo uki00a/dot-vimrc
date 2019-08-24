@@ -51,6 +51,9 @@ repo = 'mxw/vim-jsx'
 repo = 'leafgarland/typescript-vim'
 
 [[plugins]]
+repo = 'elixir-editors/vim-elixir'
+
+[[plugins]]
 repo = 'l04m33/vlime'
 on_ft = 'lisp'
 rtp = 'vim'
