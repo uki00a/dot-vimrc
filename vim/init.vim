@@ -150,7 +150,7 @@ nnoremap [unite] <Nop>
 nnoremap [vim-test] <Nop>
 
 nmap <Leader>f [unite]
-nmap <Leader>t [vim-test]
+nmap <Leader>t [leader-t]
 
 if exists(':Denite')
   nnoremap <silent> [unite]f :<C-u>Denite -buffer-name=files -mode=normal file/rec<CR>
@@ -171,11 +171,12 @@ else
   nnoremap <silent> [unite]m :<C-u>Unite menu<CR>
 endif
 
-nnoremap <silent> [vim-test]n :<C-u>TestNearest<CR>
-nnoremap <silent> [vim-test]f :<C-u>TestFile<CR>
-nnoremap <silent> [vim-test]s :<C-u>TestSuite<CR>
-nnoremap <silent> [vim-test]l :<C-u>TestLast<CR>
-nnoremap <silent> [vim-test]v :<C-u>TestVisit<CR>
+nnoremap <silent> [leader-t]n :<C-u>TestNearest<CR>
+nnoremap <silent> [leader-t]f :<C-u>TestFile<CR>
+nnoremap <silent> [leader-t]s :<C-u>TestSuite<CR>
+nnoremap <silent> [leader-t]l :<C-u>TestLast<CR>
+nnoremap <silent> [leader-t]v :<C-u>TestVisit<CR>
+nnoremap <silent> [leader-t]i :<C-u>VimuxInspectRunner<CR>
 
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-n> <C-x><C-n>
