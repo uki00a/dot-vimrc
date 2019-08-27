@@ -1,6 +1,18 @@
 let g:vlime_leader = ","
 let g:vlime_cl_use_terminal = v:true
 let g:vlime_cl_impl = "qlot"
+let g:vlime_window_settings = {
+  \   "sldb": {
+  \     "pos": "rightbelow",
+  \     "size": 60,
+  \     "vertical": v:true
+  \   },
+  \   "repl": {
+  \     "pos": "rightbelow",
+  \     "size": 60,
+  \     "vertical": v:true
+  \   }
+  \ }
 
 function! VlimeBuildServerCommandFor_ros(vlime_loader, vlime_eval) abort
   return ["ros", "run", "--",
