@@ -131,6 +131,11 @@ augroup CSharp
   autocmd!
   autocmd BufRead,BufNewFile *.cshtml set filetype=html
 augroup END
+
+augroup CommonLisp
+  autocmd!
+  autocmd BufRead,BufNewFile *.asd set filetype=lisp
+augroup END
 " augroups }}}
 
 " terminal {{{
