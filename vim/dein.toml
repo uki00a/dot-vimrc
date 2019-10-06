@@ -71,7 +71,7 @@ on_cmd = ['MemoList', 'MemoNew']
 hook_source = 'call SourceMyRC("memolist.rc.vim")'
 
 [[plugins]]
-repo = 'w0rp/ale'
+repo = 'dense-analysis/ale'
 on_cmd = ['ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
 hook_source = 'call SourceMyRC("ale.rc.vim")'
 
