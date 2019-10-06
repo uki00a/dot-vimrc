@@ -73,6 +73,7 @@ hook_source = 'call SourceMyRC("memolist.rc.vim")'
 [[plugins]]
 repo = 'dense-analysis/ale'
 on_cmd = ['ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
+on_func = 'ale#completion#OmniFunc'
 hook_source = 'call SourceMyRC("ale.rc.vim")'
 
 [[plugins]]
@@ -84,3 +85,11 @@ hook_source = 'call SourceMyRC("vim-test.rc.vim")'
 repo = 'benmills/vimux'
 on_func = ['VimuxRunCommand', 'VimuxOpenRunner']
 hook_source = 'let g:VimuxUseNearest = 0'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+on_func = 'asyncomplete#enable_for_buffer'
+hook_source = 'call SourceMyRC("asyncomplete.rc.vim")'
+
+[[plugins]]
+repo = 'yami-beta/asyncomplete-omni.vim'

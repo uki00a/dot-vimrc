@@ -1,7 +1,7 @@
 let g:ale_linters_explicit = 1
 let g:ale_linters = {
   \   'javascript': executable('tsserver') ? ['eslint', 'tsserver'] : ['eslint'],
-  \   'typescript': ['tsserver', 'eslint'],
+  \   'typescript': ['tsserver'],
   \   'vue': ['eslint']
   \ }
 let g:ale_lint_delay = 1000

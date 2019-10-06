@@ -92,17 +92,28 @@ function! s:load_matchit()
   if !exists('g:loaded_matchit') | runtime! macros/matchit.vim | endif
 endfunction
 
+function! s:on_typescript() abort
+  setlocal omnifunc=ale#completion#OmniFunc
+  ALEEnable
+  call asyncomplete#enable_for_buffer()
+  map <buffer> <C-]> <Plug>(ale_go_to_definition)
+  imap <buffer> <C-Space> <Plug>(asyncomplete_force_refresh)
+endfunction
+
+function! s:on_lisp() abort
+  imap <buffer> <C-Space> <Plug>(asyncomplete_force_refresh)
+  call asyncomplete#enable_for_buffer()
+endfunction
+
 augroup JavaScript
   autocmd!
   autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
-  autocmd FileType javascript :imap <buffer> <C-Space> <Plug>(ale_complete)
   autocmd FileType javascript :map <buffer> <C-]> <Plug>(ale_go_to_definition)
 augroup END
 
 augroup TypeScript
   autocmd!
-  autocmd FileType typescript :imap <buffer> <C-Space> <Plug>(ale_complete)
-  autocmd FileType typescript :map <buffer> <C-]> <Plug>(ale_go_to_definition)
+  autocmd FileType typescript call s:on_typescript()
 augroup END
 
 augroup Vimscript 
@@ -135,6 +146,7 @@ augroup END
 augroup CommonLisp
   autocmd!
   autocmd BufRead,BufNewFile *.asd set filetype=lisp
+  autocmd FileType lisp call s:on_lisp()
 augroup END
 " augroups }}}
 
