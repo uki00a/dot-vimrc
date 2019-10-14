@@ -75,6 +75,7 @@ repo = 'dense-analysis/ale'
 on_cmd = ['ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
 on_func = 'ale#completion#OmniFunc'
 hook_source = 'call SourceMyRC("ale.rc.vim")'
+depends = 'asyncomplete.vim'
 
 [[plugins]]
 repo = 'janko-m/vim-test'
