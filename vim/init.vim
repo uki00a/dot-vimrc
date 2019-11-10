@@ -163,10 +163,12 @@ endif
 
 " key mappings {{{
 nnoremap [unite] <Nop>
-nnoremap [vim-test] <Nop>
+nnoremap [leader-t] <Nop>
+nnoremap [git] <Nop>
 
 nmap <Leader>f [unite]
 nmap <Leader>t [leader-t]
+nmap <Leader>g [git]
 
 if exists(':Denite')
   nnoremap <silent> [unite]f :<C-u>Denite -buffer-name=files -mode=normal file/rec<CR>
@@ -193,6 +195,9 @@ nnoremap <silent> [leader-t]s :<C-u>TestSuite<CR>
 nnoremap <silent> [leader-t]l :<C-u>TestLast<CR>
 nnoremap <silent> [leader-t]v :<C-u>TestVisit<CR>
 nnoremap <silent> [leader-t]i :<C-u>VimuxInspectRunner<CR>
+
+nnoremap <silent> [git]s :<C-u>Gina status --opener=split<CR>
+nnoremap <silent> [git]d :<C-u>Gina diff --opener=split<CR>
 
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-n> <C-x><C-n>

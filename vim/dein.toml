@@ -94,3 +94,7 @@ hook_source = 'call SourceMyRC("asyncomplete.rc.vim")'
 
 [[plugins]]
 repo = 'yami-beta/asyncomplete-omni.vim'
+
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
+on_cmd = 'Gina'
