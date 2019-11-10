@@ -36,12 +36,6 @@ on_cmd = 'Denite'
 hook_source = 'call SourceMyRC("denite.rc.vim")'
 
 [[plugins]]
-repo = 'Shougo/deol.nvim'
-on_cmd = 'Deol'
-on_source = 'denite.nvim'
-hook_source = 'call SourceMyRC("deol.rc.vim")'
-
-[[plugins]]
 repo = 'pangloss/vim-javascript'
 
 [[plugins]]
