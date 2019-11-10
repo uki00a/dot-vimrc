@@ -4,7 +4,7 @@ let g:ale_linters = {
   \   'typescript': ['tsserver'],
   \   'vue': ['eslint']
   \ }
-let g:ale_lint_delay = 1000
+let g:ale_lint_delay = 2000
 
 if executable('eslint_d')
   let g:ale_javascript_eslint_use_global = 1
