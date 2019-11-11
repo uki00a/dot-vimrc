@@ -198,6 +198,7 @@ nnoremap <silent> [leader-t]i :<C-u>VimuxInspectRunner<CR>
 
 nnoremap <silent> [git]s :<C-u>Gina status --opener=split<CR>
 nnoremap <silent> [git]d :<C-u>Gina diff --opener=split<CR>
+nnoremap <silent> [git]c :<C-u>Gina commit<CR>
 
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-n> <C-x><C-n>
