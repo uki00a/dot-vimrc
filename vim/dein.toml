@@ -72,11 +72,6 @@ hook_source = 'call SourceMyRC("ale.rc.vim")'
 depends = 'asyncomplete.vim'
 
 [[plugins]]
-repo = 'janko-m/vim-test'
-on_cmd = ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit']
-hook_source = 'call SourceMyRC("vim-test.rc.vim")'
-
-[[plugins]]
 repo = 'benmills/vimux'
 on_func = ['VimuxRunCommand', 'VimuxOpenRunner']
 hook_source = 'let g:VimuxUseNearest = 0'
@@ -92,3 +87,8 @@ repo = 'yami-beta/asyncomplete-omni.vim'
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
 on_cmd = 'Gina'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+on_cmd = 'QuickRun'
+hook_source = 'call SourceMyRC("quickrun.rc.vim")'

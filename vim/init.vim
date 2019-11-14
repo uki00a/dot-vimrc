@@ -164,10 +164,12 @@ endif
 " key mappings {{{
 nnoremap [unite] <Nop>
 nnoremap [leader-t] <Nop>
+nnoremap [leader-q] <Nop>
 nnoremap [git] <Nop>
 
 nmap <Leader>f [unite]
 nmap <Leader>t [leader-t]
+nmap <Leader>q [leader-q]
 nmap <Leader>g [git]
 
 if exists(':Denite')
@@ -189,12 +191,8 @@ else
   nnoremap <silent> [unite]m :<C-u>Unite menu<CR>
 endif
 
-nnoremap <silent> [leader-t]n :<C-u>TestNearest<CR>
-nnoremap <silent> [leader-t]f :<C-u>TestFile<CR>
-nnoremap <silent> [leader-t]s :<C-u>TestSuite<CR>
-nnoremap <silent> [leader-t]l :<C-u>TestLast<CR>
-nnoremap <silent> [leader-t]v :<C-u>TestVisit<CR>
 nnoremap <silent> [leader-t]i :<C-u>VimuxInspectRunner<CR>
+nnoremap <silent> [leader-q]r :<C-u>QuickRun<CR>
 
 nnoremap <silent> [git]s :<C-u>Gina status --opener=split<CR>
 nnoremap <silent> [git]d :<C-u>Gina diff --opener=split<CR>
