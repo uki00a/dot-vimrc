@@ -10,7 +10,7 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
-on_source = 'unite.vim'
+on_source = ['unite.vim', 'vim-quickrun']
 hook_add = '''
 let s:is_windows = has("win32") || has("win64")
 let g:vimproc#download_windows_dll = s:is_windows
