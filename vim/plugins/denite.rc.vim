@@ -27,7 +27,6 @@ let s:vlime = dein#get('vlime')
 let s:vlime_entry_point = dein#get('vlime').path . '/lisp/start-vlime.lisp' 
 let s:menus.tools = { 'description': 'Tools' }
 let s:menus.tools.command_candidates = [
-\   ['REPL(CL)', "call VimuxRunCommand('rlwrap qlot exec ros run --load " . s:vlime_entry_point . "')"],
 \   ['dein: clear state', 'call dein#clear_state()']
 \ ]
 
