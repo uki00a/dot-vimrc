@@ -36,6 +36,10 @@ on_cmd = 'Denite'
 hook_source = 'call SourceMyRC("denite.rc.vim")'
 
 [[plugins]]
+repo = 'uki00a/denite-tmux'
+on_source = 'denite.nvim'
+
+[[plugins]]
 repo = 'pangloss/vim-javascript'
 
 [[plugins]]
