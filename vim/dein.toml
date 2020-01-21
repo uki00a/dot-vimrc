@@ -94,6 +94,10 @@ repo = 'lambdalisue/gina.vim'
 on_cmd = 'Gina'
 
 [[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+on_cmd = ['EditorConfigEnable', 'EditorConfigReload']
+
+[[plugins]]
 repo = 'thinca/vim-quickrun'
 on_cmd = 'QuickRun'
 hook_source = 'call SourceMyRC("quickrun.rc.vim")'
