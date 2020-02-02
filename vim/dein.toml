@@ -52,7 +52,7 @@ repo = 'leafgarland/typescript-vim'
 repo = 'elixir-editors/vim-elixir'
 
 [[plugins]]
-repo = 'l04m33/vlime'
+repo = 'vlime/vlime'
 on_ft = 'lisp'
 rtp = 'vim'
 hook_source = 'call SourceMyRC("vlime.rc.vim")'
