@@ -87,9 +87,6 @@ on_func = 'asyncomplete#enable_for_buffer'
 hook_source = 'call SourceMyRC("asyncomplete.rc.vim")'
 
 [[plugins]]
-repo = 'uki00a/asyncomplete-vlime.vim'
-
-[[plugins]]
 repo = 'lambdalisue/gina.vim'
 on_cmd = 'Gina'
 

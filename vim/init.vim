@@ -60,17 +60,8 @@ if isdirectory(s:dein_repos_dir) && dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml(fnamemodify(expand('<sfile>'), ':h') . '/dein.toml')
 
-  let s:dein_local_dir = expand('~/.local/share/dein') 
-  let s:dein_local_toml = s:dein_local_dir . '/dein.toml'
-
-  if filereadable(s:dein_local_toml)
-    call dein#load_toml(s:dein_local_toml)
-  endif
-
-  if isdirectory(s:dein_local_dir)
-    call dein#local(s:dein_local_dir,
-      \ { 'frozen': 1, 'merged': 0 },
-      \ ['vim*', '*-vim', 'unite-*', 'denite-*', '*.vim'])
+  if isdirectory(expand('~/.ghq/github.com/uki00a'))
+    call dein#local(expand('~/.ghq/github.com/uki00a'))
   endif
   
   call dein#end()
