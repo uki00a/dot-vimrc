@@ -1,3 +1,5 @@
 {
-  "vim": ["~/.config/nvim", "~/.vim"]
+  "vim": ["~/.config/nvim", "~/.vim"],
+  "vscode/settings.json": "~/.config/Code/User/settings.json",
+  "vscode/keybindings.json": "~/.config/Code/User/keybindings.json"
 }
