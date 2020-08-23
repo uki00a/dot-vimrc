@@ -56,8 +56,12 @@ hook_post_update = "call fzf#install()"
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'
-on_cmd = ['Files', 'Buffers', 'Lines', 'Ag', 'History:']
+on_cmd = ['FzfFiles', 'FzfBuffers', 'FzfLines', 'FzfAg', 'FzfHistory:']
 depends = ['fzf']
+hook_add = '''
+let g:fzf_command_prefix = "Fzf"
+'''
+hook_source = 'call SourceMyRC("fzf.rc.vim")'
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'

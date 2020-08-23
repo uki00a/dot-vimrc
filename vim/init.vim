@@ -160,12 +160,11 @@ nmap <Leader>f [ff]
 nmap <Leader>g [git]
 
 " fzf
-" TODO add 'Fzf' prefix
-nnoremap <silent> [ff]f :<C-u>Files<CR>
-nnoremap <silent> [ff]b :<C-u>Buffers<CR>
-nnoremap <silent> [ff]g :<C-u>Ag<CR>
-nnoremap <silent> [ff]l :<C-u>Lines<CR>
-nnoremap <silent> [ff]c :<C-u>History:<CR>
+nnoremap <silent> [ff]f :<C-u>FzfFiles<CR>
+nnoremap <silent> [ff]b :<C-u>FzfBuffers<CR>
+nnoremap <silent> [ff]g :<C-u>FzfAg<CR>
+nnoremap <silent> [ff]l :<C-u>FzfLines<CR>
+nnoremap <silent> [ff]c :<C-u>FzfHistory:<CR>
 
 " gina
 nnoremap <silent> [git]s :<C-u>Gina status --opener=split<CR>
