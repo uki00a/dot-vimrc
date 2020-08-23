@@ -84,8 +84,8 @@ function! s:load_matchit()
 endfunction
 
 function! s:typescript() abort
-  ALEEnableBuffer
-  call asyncomplete#enable_for_buffer()
+  "ALEEnableBuffer
+  "call asyncomplete#enable_for_buffer()
   map <buffer> <C-]> <Plug>(ale_go_to_definition)
   imap <buffer> <C-Space> <Plug>(asyncomplete_force_refresh)
 endfunction
