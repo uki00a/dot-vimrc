@@ -34,7 +34,7 @@ repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
 repo = 'dense-analysis/ale'
-on_cmd = ['ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
+on_cmd = ['ALEFix', 'ALEFixSuggest', 'ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
 on_func = 'ale#completion#OmniFunc'
 hook_source = 'call SourceMyRC("ale.rc.vim")'
 depends = 'asyncomplete.vim'
