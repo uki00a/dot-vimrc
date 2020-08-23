@@ -33,6 +33,13 @@ repo = 'cocopon/iceberg.vim'
 '''
 
 [[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+merged = 0
+on_cmd = ['CocEnable', 'CocInstall', 'CocConfig']
+hook_source = 'call SourceMyRC("asyncomplete.rc.vim")'
+
+[[plugins]]
 repo = 'dense-analysis/ale'
 on_cmd = ['ALEFix', 'ALEFixSuggest', 'ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
 on_func = 'ale#completion#OmniFunc'
