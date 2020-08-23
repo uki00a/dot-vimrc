@@ -9,37 +9,6 @@ endfunction
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-on_source = ['unite.vim', 'vim-quickrun']
-hook_add = '''
-let s:is_windows = has("win32") || has("win64")
-let g:vimproc#download_windows_dll = s:is_windows
-if !s:is_windows
-  let g:dein#plugin.build = 'make'
-endif
-'''
-hook_post_update = '''
-if !g:vimproc#download_windows_dll
-  call dein#build('vimproc.vim')
-endif
-'''
-
-[[plugins]]
-repo = 'Shougo/unite.vim'
-on_cmd = ['Unite', 'UniteWithCursorWord', 'UniteWithBufferDir']
-hook_source = 'call SourceMyRC("unite.rc.vim")'
-
-[[plugins]]
-if = "has('python3') && has('nvim')"
-repo = 'Shougo/denite.nvim'
-on_cmd = 'Denite'
-hook_source = 'call SourceMyRC("denite.rc.vim")'
-
-[[plugins]]
-repo = 'uki00a/denite-tmux'
-on_source = 'denite.nvim'
-
-[[plugins]]
 repo = 'pangloss/vim-javascript'
 
 [[plugins]]
@@ -64,22 +33,12 @@ repo = 'cocopon/iceberg.vim'
 '''
 
 [[plugins]]
-repo = 'glidenote/memolist.vim'
-on_cmd = ['MemoList', 'MemoNew']
-hook_source = 'call SourceMyRC("memolist.rc.vim")'
-
-[[plugins]]
 repo = 'dense-analysis/ale'
 on_cmd = ['ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
 on_func = 'ale#completion#OmniFunc'
 hook_source = 'call SourceMyRC("ale.rc.vim")'
 depends = 'asyncomplete.vim'
 on_source = 'asyncomplete.vim'
-
-[[plugins]]
-repo = 'benmills/vimux'
-on_func = ['VimuxRunCommand', 'VimuxOpenRunner']
-hook_source = 'let g:VimuxUseNearest = 0'
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
@@ -93,8 +52,3 @@ on_cmd = 'Gina'
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 on_cmd = ['EditorConfigEnable', 'EditorConfigReload']
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-on_cmd = 'QuickRun'
-hook_source = 'call SourceMyRC("quickrun.rc.vim")'

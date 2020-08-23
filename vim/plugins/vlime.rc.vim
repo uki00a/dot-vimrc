@@ -14,24 +14,6 @@ let g:vlime_window_settings = {
   \   }
   \ }
 
-" function! MyVlimeStart() abort
-"   let l:cl_impl = s:ask_for_cl_impl()
-"   if l:cl_impl ==# 'qlot'
-"     call s:VlimeStartQlot()
-"   else
-"     call s:VlimeStartRoswell()
-"   endif
-" endfunction
-" 
-" let s:vlime_entry_point = dein#get('vlime').path . '/lisp/start-vlime.lisp' 
-" function! s:VlimeStartRoswell() abort
-"   call VimuxRunCommand('rlwrap ros run --load ' . s:vlime_entry_point)
-" endfunction
-" 
-" function! s:VlimeStartQlot() abort
-"   call VimuxRunCommand('rlwrap qlot exec ros run --load ' . s:vlime_entry_point)
-" endfunction
-
 function! s:ask_for_cl_impl() abort
   call inputsave()
   let l:cl_impl = input('Common Lisp implementation(ros/qlot):', 'ros')
