@@ -155,6 +155,7 @@ nnoremap [git] <Nop>
 
 nmap <Leader>f [ff]
 nmap <Leader>g [git]
+nmap <Leader>l [coc]
 
 " fzf
 nnoremap <silent> [ff]f :<C-u>FzfFiles<CR>
@@ -167,6 +168,12 @@ nnoremap <silent> [ff]c :<C-u>FzfHistory:<CR>
 nnoremap <silent> [git]s :<C-u>Gina status --opener=split<CR>
 nnoremap <silent> [git]d :<C-u>Gina diff --opener=split<CR>
 nnoremap <silent> [git]c :<C-u>Gina commit<CR>
+
+" coc.nvim
+nmap <silent> [coc]r <Plug>(coc-references)<CR>
+nmap <silent> [coc]j <Plug>(coc-definition)<CR>
+nnoremap <silent> [coc]l :<C-u>CocDiagnostics<CR>
+nnoremap <silent> [coc]f :<C-u>call CocAction('format')<CR>
 
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-n> <C-x><C-n>
