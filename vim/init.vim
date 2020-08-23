@@ -159,26 +159,15 @@ nnoremap [git] <Nop>
 nmap <Leader>f [ff]
 nmap <Leader>g [git]
 
-"if exists(':Denite')
-"  nnoremap <silent> [unite]f :<C-u>Denite -buffer-name=files -mode=normal file/rec<CR>
-"  nnoremap <silent> [unite]b :<C-u>Denite buffer -mode=normal<CR>
-"  nnoremap <silent> [unite]t :<C-u>Denite tmux/session -mode=normal<CR>
-"  nnoremap <silent> [unite]g :<C-u>Denite grep -no-quit<CR>
-"  nnoremap <silent> [unite]r :<C-u>Denite register -mode=normal -buffer-name=register<CR>
-"  nnoremap <silent> [unite]l :<C-u>DeniteCursorWord line -mode=normal -buffer-name=search<CR>
-"  nnoremap <silent> [unite]m :<C-u>Denite menu -mode=normal<CR>
-"  nnoremap <silent> [unite]c :<C-u>Denite command_history -mode=normal<CR>
-"  nnoremap <silent> [unite]s :<C-u>Denite source -mode=normal<CR>
-"else
-"  nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files file_rec/async<CR>
-"  nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-"  nnoremap <silent> [unite]t :<C-u>Unite -immediately tab:no-current<CR>
-"  nnoremap <silent> [unite]g :<C-u>Unite grep -no-quit<CR>
-"  nnoremap <silent> [unite]r :<C-u>Unite register -buffer-name=register<CR>
-"  nnoremap <silent> [unite]l :<C-u>UniteWithCursorWord line -buffer-name=search<CR>
-"  nnoremap <silent> [unite]m :<C-u>Unite menu<CR>
-"endif
-"
+" fzf
+" TODO add 'Fzf' prefix
+nnoremap <silent> [ff]f :<C-u>Files<CR>
+nnoremap <silent> [ff]b :<C-u>Buffers<CR>
+nnoremap <silent> [ff]g :<C-u>Ag<CR>
+nnoremap <silent> [ff]l :<C-u>Lines<CR>
+nnoremap <silent> [ff]c :<C-u>History:<CR>
+
+" gina
 nnoremap <silent> [git]s :<C-u>Gina status --opener=split<CR>
 nnoremap <silent> [git]d :<C-u>Gina diff --opener=split<CR>
 nnoremap <silent> [git]c :<C-u>Gina commit<CR>

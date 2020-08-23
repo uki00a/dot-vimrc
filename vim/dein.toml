@@ -50,5 +50,15 @@ repo = 'lambdalisue/gina.vim'
 on_cmd = 'Gina'
 
 [[plugins]]
+repo = 'junegunn/fzf'
+on_source = 'fzf.vim'
+hook_post_update = "call fzf#install()"
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+on_cmd = ['Files', 'Buffers', 'Lines', 'Ag', 'History:']
+depends = ['fzf']
+
+[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 on_cmd = ['EditorConfigEnable', 'EditorConfigReload']
