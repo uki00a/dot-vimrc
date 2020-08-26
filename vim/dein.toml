@@ -64,6 +64,7 @@ hook_post_update = "call fzf#install()"
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 on_cmd = ['FzfFiles', 'FzfBuffers', 'FzfLines', 'FzfAg', 'FzfHistory:']
+on_func = ['fzf#run', 'fzf#wrap']
 depends = ['fzf']
 hook_add = '''
 let g:fzf_command_prefix = "Fzf"
