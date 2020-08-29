@@ -150,7 +150,7 @@ endif
 " terminal }}}
 
 " commands {{{
-command! -nargs=0 FzfGhq :call fzf#run(fzf#wrap({'source': 'ghq list --full-path', 'sink': 'cd'}))
+command! -nargs=0 Ghq :call fzf#run(fzf#wrap({'source': 'ghq list --full-path', 'sink': 'cd'}))
 " commands }}}
 
 " key mappings {{{
