@@ -59,11 +59,6 @@ execute "set runtimepath+=" . s:dein_repos_dir
 if isdirectory(s:dein_repos_dir) && dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml(fnamemodify(expand('<sfile>'), ':h') . '/dein.toml')
-
-  if isdirectory(expand('~/.ghq/github.com/uki00a'))
-    call dein#local(expand('~/.ghq/github.com/uki00a'))
-  endif
-  
   call dein#end()
   call dein#save_state()
 endif
@@ -162,11 +157,11 @@ nmap <Leader>g [git]
 nmap <Leader>l [coc]
 
 " fzf
-nnoremap <silent> [ff]f :<C-u>FzfFiles<CR>
+nnoremap <silent> [ff]f :<C-u>FzfHistory<CR>
 nnoremap <silent> [ff]b :<C-u>FzfBuffers<CR>
 nnoremap <silent> [ff]g :<C-u>FzfAg<CR>
 nnoremap <silent> [ff]l :<C-u>FzfLines<CR>
-nnoremap <silent> [ff]c :<C-u>FzfHistory:<CR>
+nnoremap <silent> [ff]c :<C-u>FzfCommands<CR>
 
 " gina
 nnoremap <silent> [git]s :<C-u>Gina status --opener=split<CR>
