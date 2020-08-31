@@ -162,11 +162,13 @@ nnoremap <silent> [ff]b :<C-u>FzfBuffers<CR>
 nnoremap <silent> [ff]g :<C-u>FzfAg<CR>
 nnoremap <silent> [ff]l :<C-u>FzfLines<CR>
 nnoremap <silent> [ff]c :<C-u>FzfCommands<CR>
+nnoremap <silent> [ff]m :<C-u>FzfMaps<CR>
 
 " gina
 nnoremap <silent> [git]s :<C-u>Gina status --opener=split<CR>
 nnoremap <silent> [git]d :<C-u>Gina diff --opener=split<CR>
 nnoremap <silent> [git]c :<C-u>Gina commit<CR>
+nnoremap <silent> [git]p :<C-u>Gina push<CR>
 
 " coc.nvim
 nmap <silent> [coc]r <Plug>(coc-references)<CR>
