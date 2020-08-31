@@ -145,7 +145,8 @@ endif
 " terminal }}}
 
 " commands {{{
-command! -nargs=0 Ghq :call fzf#run(fzf#wrap({'source': 'ghq list --full-path', 'sink': 'cd'}))
+command! -nargs=0 Ghq :call vimrc#fzf#ghq()
+command! -nargs=0 FzfDein :call vimrc#fzf#dein()
 " commands }}}
 
 " key mappings {{{
