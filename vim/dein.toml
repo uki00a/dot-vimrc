@@ -27,6 +27,10 @@ rtp = 'vim'
 hook_source = 'call SourceMyRC("vlime.rc.vim")'
 
 [[plugins]]
+repo = 'uki00a/vim-deno'
+on_cmd = ['DenoFmt', 'DenoDoc', 'DenoTest']
+
+[[plugins]]
 repo = 'cocopon/iceberg.vim'
   hook_add = '''
   autocmd MyAutoCmd VimEnter * nested colorscheme iceberg
