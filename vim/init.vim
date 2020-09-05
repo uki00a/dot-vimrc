@@ -166,6 +166,7 @@ nnoremap <silent> [ff]c :<C-u>FzfCommands<CR>
 nnoremap <silent> [ff]m :<C-u>FzfMaps<CR>
 
 " gina
+nnoremap <silent> [git]b :<C-u>Gina branch --opener=split<CR>
 nnoremap <silent> [git]s :<C-u>Gina status --opener=split<CR>
 nnoremap <silent> [git]d :<C-u>Gina diff --opener=split<CR>
 nnoremap <silent> [git]c :<C-u>Gina commit<CR>
