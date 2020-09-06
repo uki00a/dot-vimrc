@@ -17,6 +17,9 @@ if executable('eslint_d')
   let g:ale_javascript_eslint_executable = 'eslint_d'
 endif
 
+let g:ale_sign_warning = "🥺"
+let g:ale_sign_error = "💩"
+
 if has('win32') || has('win64')
   let g:ale_shell = 'cmd.exe'
 endif
