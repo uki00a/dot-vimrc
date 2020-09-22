@@ -29,6 +29,7 @@ hook_source = 'call SourceMyRC("vlime.rc.vim")'
 [[plugins]]
 repo = 'uki00a/vim-deno'
 on_cmd = ['DenoFmt', 'DenoDoc', 'DenoTest']
+build = 'npm install'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
@@ -37,19 +38,24 @@ repo = 'cocopon/iceberg.vim'
 '''
 
 [[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+on_func = 'lsp#enable'
+hook_source = 'call SourceMyRC("lsp.rc.vim")'
+depends = 'vim-deno'
 
 [[plugins]]
 repo = 'dense-analysis/ale'
 on_cmd = ['ALEFix', 'ALEFixSuggest', 'ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
 on_func = 'ale#completion#OmniFunc'
 hook_source = 'call SourceMyRC("ale.rc.vim")'
-depends = 'asyncomplete.vim'
+depends = ['asyncomplete.vim', 'vim-deno']
 on_source = 'asyncomplete.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
 on_func = 'asyncomplete#enable_for_buffer'
 hook_source = 'call SourceMyRC("asyncomplete.rc.vim")'
+depends = ['vlime']
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'

@@ -1,9 +1,9 @@
 let g:ale_linters_explicit = 1
 let g:ale_linters = {
-  \   'javascript': executable('tsserver') ? ['eslint', 'tsserver'] : ['eslint'],
-  \   'typescript': ['tsserver'],
-  \   'vue': ['eslint']
-  \ }
+\   'javascript': ['eslint'],
+\   'typescript': executable('deno') ? ['deno', 'deno-tsserver'] : ['eslint', 'tsserver'],
+\   'vue': ['eslint']
+\ }
 let g:ale_lint_delay = 2000
 
 let g:ale_fixers = {

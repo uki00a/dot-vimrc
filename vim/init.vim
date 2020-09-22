@@ -79,7 +79,11 @@ function! s:load_matchit()
 endfunction
 
 function! s:on_typescript() abort
+  ALEEnable
+  call asyncomplete#enable_for_buffer()
   map <buffer> <C-]> <Plug>(ale_go_to_definition)
+  map <buffer> <C-]> <Plug>(ale_go_to_definition)
+  imap <buffer> <C-Space> <Plug>(asyncomplete_force_refresh) 
 endfunction
 
 function! s:on_lisp() abort
