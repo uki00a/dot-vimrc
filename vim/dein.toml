@@ -40,7 +40,6 @@ repo = 'cocopon/iceberg.vim'
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 on_func = 'lsp#enable'
-hook_source = 'call SourceMyRC("lsp.rc.vim")'
 depends = 'vim-deno'
 
 [[plugins]]
