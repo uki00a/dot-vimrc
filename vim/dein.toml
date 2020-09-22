@@ -37,11 +37,6 @@ repo = 'cocopon/iceberg.vim'
 '''
 
 [[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-merged = 0
-on_cmd = ['CocEnable', 'CocInstall', 'CocConfig']
-hook_source = 'call SourceMyRC("coc.rc.vim")'
 
 [[plugins]]
 repo = 'dense-analysis/ale'
