@@ -47,6 +47,7 @@ let g:vim_indent_cont = 2
 
 augroup MyAutoCmd
   autocmd!
+  autocmd VimEnter * call dein#call_hook("post_source")
 augroup END
 
 

@@ -1,10 +1,11 @@
+let s:has_deno = executable('deno')
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_insert_leave = 0
 let g:ale_linters_explicit = 1
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'typescript': executable('deno') ? ['deno', 'deno-tsserver'] : ['eslint', 'tsserver'],
+\   'typescript': s:has_deno ? ['deno', 'deno-tsserver'] : ['eslint', 'tsserver'],
 \   'vue': ['eslint']
 \ }
 let g:ale_lint_delay = 2000
@@ -12,6 +13,7 @@ let g:ale_lint_delay = 2000
 let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \   'javascript': ['eslint'],
+  \   'typescript': s:has_deno ? ['deno'] : ['prettier'],
   \   'go': ['gofmt']
   \}
 

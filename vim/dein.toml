@@ -30,6 +30,7 @@ hook_source = 'call SourceMyRC("vlime.rc.vim")'
 repo = 'uki00a/vim-deno'
 on_cmd = ['DenoFmt', 'DenoDoc', 'DenoTest']
 build = 'npm install'
+hook_post_source = 'call deno#ale#AddFixer()'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
