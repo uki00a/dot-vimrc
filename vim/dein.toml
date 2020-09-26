@@ -41,7 +41,13 @@ repo = 'cocopon/iceberg.vim'
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 on_func = 'lsp#enable'
-depends = 'vim-deno'
+depends = 'asyncomplete.vim'
+hook_source = 'call SourceMyRC("lsp.rc.vim")'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+on_source = 'asyncomplete.vim'
+depends = ['vim-lsp']
 
 [[plugins]]
 repo = 'dense-analysis/ale'

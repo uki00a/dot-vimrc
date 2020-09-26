@@ -81,10 +81,13 @@ endfunction
 
 function! s:on_typescript() abort
   ALEEnable
-  call asyncomplete#enable_for_buffer()
   map <buffer> <C-]> <Plug>(ale_go_to_definition)
   map <buffer> <C-]> <Plug>(ale_go_to_definition)
   imap <buffer> <C-Space> <Plug>(asyncomplete_force_refresh) 
+endfunction
+
+function! s:on_golang() abort
+  map <buffer> gd <plug>(lsp-definition)
 endfunction
 
 function! s:on_lisp() abort
@@ -130,6 +133,7 @@ augroup END
 augroup Golang
   autocmd!
   autocmd FileType go setlocal noexpandtab
+  autocmd FileType go call s:on_golang()
 augroup END
 
 augroup CommonLisp
@@ -156,13 +160,20 @@ command! -nargs=0 Ghq :call vimrc#fzf#ghq()
 command! -nargs=0 FzfDein :call vimrc#fzf#dein()
 " commands }}}
 
+" functions {{{
+function! s:EnableLsp() abort
+  call lsp#enable()
+  echomsg "vim-lsp enabled"
+endfunction
+" functions }}}
+
 " key mappings {{{
 nnoremap [ff] <Nop>
 nnoremap [git] <Nop>
 
 nmap <Leader>f [ff]
 nmap <Leader>g [git]
-nmap <Leader>l [coc]
+nmap <Leader>l [lsp]
 
 " fzf
 nnoremap <silent> [ff]f :<C-u>FzfHistory<CR>
@@ -179,11 +190,9 @@ nnoremap <silent> [git]d :<C-u>Gina diff --opener=split<CR>
 nnoremap <silent> [git]c :<C-u>Gina commit<CR>
 nnoremap <silent> [git]p :<C-u>Gina push<CR>
 
-" coc.nvim
-nmap <silent> [coc]r <Plug>(coc-references)<CR>
-nmap <silent> [coc]j <Plug>(coc-definition)<CR>
-nnoremap <silent> [coc]l :<C-u>CocDiagnostics<CR>
-nnoremap <silent> [coc]f :<C-u>call CocAction('format')<CR>
+" vim-lsp
+nmap <silent> [lsp]e :<C-u>call <SID>EnableLsp()<CR>
+nmap <silent> [lsp]d :<C-u>call lsp#disable()<CR>
 
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-n> <C-x><C-n>
