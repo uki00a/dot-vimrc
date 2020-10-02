@@ -1,0 +1,18 @@
+{
+  "Class": {
+    "prefix": "class",
+    "body": [
+      "class $0 {",
+      "}"
+    ],
+    "description": "..."
+  },
+  "Function": {
+    "prefix": "function",
+    "body": [
+      "function $0() {",
+      "}"
+    ],
+    "description": "..."
+  }
+}

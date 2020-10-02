@@ -32,5 +32,3 @@ endif
 call asyncomplete#register_source(asyncomplete#sources#ale#get_source_options({
 \ 'priority': 10
 \ }))
-
-
