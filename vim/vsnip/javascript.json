@@ -48,5 +48,14 @@
       "}"
     ],
     "description": "..."
+  },
+  "Promise": {
+    "prefix": "new Promise",
+    "body": [
+      "new Promise((resolve, reject) => {",
+      "  $0",
+      "});"
+    ],
+    "description": "..."
   }
 }
