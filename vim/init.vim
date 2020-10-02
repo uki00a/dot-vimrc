@@ -196,4 +196,5 @@ nmap <silent> [lsp]d :<C-u>call lsp#disable()<CR>
 
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-n> <C-x><C-n>
+imap <expr> <C-j> vsnip#expandable() ? "<Plug>(vsnip-expand)" : "<C-j>"
 " key mappings }}}

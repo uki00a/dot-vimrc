@@ -52,6 +52,7 @@ on_source = 'vim-lsp'
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip'
 on_cmd = ['VsnipOpen']
+on_func = 'vsnip#expandable'
 hook_source = 'call SourceMyRC("vim-vsnip.rc.vim")'
 
 [[plugins]]
