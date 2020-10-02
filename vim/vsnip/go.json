@@ -1,0 +1,26 @@
+{
+  "Function": {
+    "prefix": "func",
+    "body": [
+      "func $0() {",
+      "}"
+    ],
+    "description": "..."
+  },
+  "Interface": {
+    "prefix": "type interface",
+    "body": [
+      "type $0 interface {",
+      "}"
+    ],
+    "description": "..."
+  },
+  "Struct": {
+    "prefix": "type struct",
+    "body": [
+      "type $0 struct {",
+      "}"
+    ],
+    "description": "..."
+  }
+}
