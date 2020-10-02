@@ -14,5 +14,39 @@
       "}"
     ],
     "description": "..."
+  },
+  "For": {
+    "prefix": "for",
+    "body": [
+      "for ($0; ; ) {",
+      "}"
+    ],
+    "description": "..."
+  },
+  "While": {
+    "prefix": "while",
+    "body": [
+      "while ($0) {",
+      "}"
+    ],
+    "description": "..."
+  },
+  "If": {
+    "prefix": "if",
+    "body": [
+      "if ($0) {",
+      "}"
+    ],
+    "description": "..."
+  },
+  "Try": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "  $0",
+      "} catch (e) {",
+      "}"
+    ],
+    "description": "..."
   }
 }
