@@ -1,0 +1,26 @@
+{
+  "Function": {
+    "prefix": "function",
+    "body": [
+      "function! $0() abort",
+      "endfunction"
+    ],
+    "description": "..."
+  },
+  "If": {
+    "prefix": "if",
+    "body": [
+      "if $0",
+      "endif"
+    ],
+    "description": "..."
+  },
+  "For": {
+    "prefix": "for",
+    "body": [
+      "for $0",
+      "endfor"
+    ],
+    "description": "..."
+  }
+}
