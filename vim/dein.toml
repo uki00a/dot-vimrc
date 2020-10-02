@@ -25,6 +25,7 @@ repo = 'vlime/vlime'
 on_ft = 'lisp'
 rtp = 'vim'
 hook_source = 'call SourceMyRC("vlime.rc.vim")'
+depends = ['asyncomplete.vim']
 
 [[plugins]]
 repo = 'uki00a/vim-deno'
@@ -61,7 +62,6 @@ on_source = 'asyncomplete.vim'
 repo = 'prabirshrestha/asyncomplete.vim'
 on_func = 'asyncomplete#enable_for_buffer'
 hook_source = 'call SourceMyRC("asyncomplete.rc.vim")'
-depends = ['vlime']
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'

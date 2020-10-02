@@ -14,6 +14,9 @@ let g:vlime_window_settings = {
   \   }
   \ }
 
+
+call asyncomplete#register_source(asyncomplete#sources#vlime#get_source_options({ 'priority': 10 }))
+
 function! s:ask_for_cl_impl() abort
   call inputsave()
   let l:cl_impl = input('Common Lisp implementation(ros/qlot):', 'ros')
