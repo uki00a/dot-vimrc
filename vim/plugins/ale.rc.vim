@@ -28,3 +28,9 @@ let g:ale_sign_error = "💩"
 if has('win32') || has('win64')
   let g:ale_shell = 'cmd.exe'
 endif
+
+call asyncomplete#register_source(asyncomplete#sources#ale#get_source_options({
+\ 'priority': 10
+\ }))
+
+
