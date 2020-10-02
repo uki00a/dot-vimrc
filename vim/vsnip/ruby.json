@@ -1,0 +1,26 @@
+{
+  "Class": {
+    "prefix": "class",
+    "body": [
+      "class $0",
+      "end"
+    ],
+    "description": "..."
+  },
+  "Module": {
+    "prefix": "module",
+    "body": [
+      "module $0",
+      "end"
+    ],
+    "description": "..."
+  },
+  "Method": {
+    "prefix": "def",
+    "body": [
+      "def $0()",
+      "end"
+    ],
+    "description": "..."
+  }
+}
