@@ -57,6 +57,13 @@
     ],
     "description": "..."
   },
+  "Import": {
+    "prefix": "import",
+    "body": [
+      "import {$0} from \"\";"
+    ],
+    "description": "..."
+  },
   "Promise": {
     "prefix": "new Promise",
     "body": [
