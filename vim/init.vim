@@ -174,6 +174,7 @@ nnoremap [git] <Nop>
 nmap <Leader>f [ff]
 nmap <Leader>g [git]
 nmap <Leader>l [lsp]
+nmap <Leader>a [ale]
 
 " fzf
 nnoremap <silent> [ff]f :<C-u>FzfHistory<CR>
@@ -193,6 +194,10 @@ nnoremap <silent> [git]p :<C-u>Gina push<CR>
 " vim-lsp
 nmap <silent> [lsp]e :<C-u>call <SID>EnableLsp()<CR>
 nmap <silent> [lsp]d :<C-u>call lsp#disable()<CR>
+
+" ale
+nmap <silent> [ale]l <Plug>(ale_lint)
+nmap <silent> [ale]f <Plug>(ale_fix)
 
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-n> <C-x><C-n>
