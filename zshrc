@@ -1,8 +1,4 @@
 export EDITOR=nvim
-export GOPATH=$HOME/go
-export DENO_DIR=$HOME/.cache/deno
-export DENO_INSTALL_ROOT=$HOME/.deno
-export PATH=$PATH:$GOPATH/bin:$DENO_INSTALL_ROOT/bin:$HOME/bin
 
 autoload -U compinit
 compinit -u
@@ -29,6 +25,21 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
 
 bindkey -e
+
+export GOPATH=$HOME/go
+export DENO_DIR=$HOME/.cache/deno
+export DENO_INSTALL_ROOT=$HOME/.deno
+export PATH=$PATH:$GOPATH/bin:$DENO_INSTALL_ROOT/bin:$HOME/bin
+
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+alias ghq-go='GHQ_ROOT=$HOME/go/src/github.com/uki00a ghq list'
 
 if [ -e $HOME/.asdf/asdf.sh ]; then
   . $HOME/.asdf/asdf.sh
