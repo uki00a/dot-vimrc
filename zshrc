@@ -39,7 +39,7 @@ alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls --color=auto'
-alias ghq-go='GHQ_ROOT=$HOME/go/src/github.com/uki00a ghq list'
+alias ghq-go='GHQ_ROOT=$GOPATH/src/github.com/uki00a ghq list'
 
 if [ -e $HOME/.asdf/asdf.sh ]; then
   . $HOME/.asdf/asdf.sh
