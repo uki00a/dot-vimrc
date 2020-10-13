@@ -10,7 +10,7 @@ compinit -u
 autoload -U colors
 colors
 
-PROMPT='%~ %# '
+PROMPT="%{${fg[blue]}%}[%~@%m] %(!.#.$) %{${reset_color}%}"
 
 setopt print_eight_bit
 setopt no_beep
