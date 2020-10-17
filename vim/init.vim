@@ -175,6 +175,7 @@ nmap <Leader>f [ff]
 nmap <Leader>g [git]
 nmap <Leader>l [lsp]
 nmap <Leader>a [ale]
+nmap <Leader>s [shell]
 
 " fzf
 nnoremap <silent> [ff]f :<C-u>FzfHistory<CR>
@@ -198,6 +199,9 @@ nmap <silent> [lsp]d :<C-u>call lsp#disable()<CR>
 " ale
 nmap <silent> [ale]l <Plug>(ale_lint)
 nmap <silent> [ale]f <Plug>(ale_fix)
+
+" deol
+nnoremap <silent> [shell]o :<C-u>Deol zsh -split=vertical<CR>
 
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-n> <C-x><C-n>
