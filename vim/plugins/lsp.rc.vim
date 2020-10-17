@@ -1,3 +1,5 @@
+let g:lsp_signs_error = {"text": "💩"}
+let g:lsp_signs_warning = {"text": "🥺"}
 if executable("gopls")
   augroup LspGo
     autocmd!
