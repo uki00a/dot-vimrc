@@ -97,5 +97,9 @@ repo = 'Shougo/deol.nvim'
 on_cmd = 'Deol'
 
 [[plugins]]
+repo = 'simeji/winresizer'
+on_cmd = 'WinResizerStartResize'
+
+[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 on_cmd = ['EditorConfigEnable', 'EditorConfigReload']

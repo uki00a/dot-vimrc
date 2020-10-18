@@ -206,4 +206,5 @@ nnoremap <silent> [shell]o :<C-u>Deol zsh -split=vertical<CR>
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-n> <C-x><C-n>
 imap <expr> <C-j> vsnip#expandable() ? "<Plug>(vsnip-expand)" : "<C-j>"
+nnoremap <silent> <C-e> :<C-u>WinResizerStartResize<CR>
 " key mappings }}}
