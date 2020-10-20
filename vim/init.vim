@@ -156,8 +156,8 @@ endif
 " terminal }}}
 
 " commands {{{
-command! -nargs=0 Ghq :call vimrc#fzf#ghq()
-command! -nargs=0 FzfDein :call vimrc#fzf#dein()
+" command! -nargs=0 Ghq :call vimrc#fzf#ghq()
+" command! -nargs=0 FzfDein :call vimrc#fzf#dein()
 " commands }}}
 
 " functions {{{
@@ -177,13 +177,14 @@ nmap <Leader>l [lsp]
 nmap <Leader>a [ale]
 nmap <Leader>s [shell]
 
-" fzf
-nnoremap <silent> [ff]f :<C-u>FzfHistory<CR>
-nnoremap <silent> [ff]b :<C-u>FzfBuffers<CR>
-nnoremap <silent> [ff]g :<C-u>FzfAg<CR>
-nnoremap <silent> [ff]l :<C-u>FzfLines<CR>
-nnoremap <silent> [ff]c :<C-u>FzfCommands<CR>
-nnoremap <silent> [ff]m :<C-u>FzfMaps<CR>
+" clap
+nnoremap <silent> [ff]f :<C-u>Clap history<CR>
+nnoremap <silent> [ff]b :<C-u>Clap buffers<CR>
+" TODO Use ag
+nnoremap <silent> [ff]g :<C-u>Clap grep2<CR>
+nnoremap <silent> [ff]l :<C-u>Clap lines<CR>
+nnoremap <silent> [ff]c :<C-u>Clap command<CR>
+nnoremap <silent> [ff]m :<C-u>Clap maps<CR>
 
 " gina
 nnoremap <silent> [git]b :<C-u>Gina branch --opener=split<CR>

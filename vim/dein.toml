@@ -78,19 +78,11 @@ repo = 'lambdalisue/gina.vim'
 on_cmd = 'Gina'
 
 [[plugins]]
-repo = 'junegunn/fzf'
-on_source = 'fzf.vim'
-hook_post_update = "call fzf#install()"
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-on_cmd = ['FzfFiles', 'FzfBuffers', 'FzfLines', 'FzfAg', 'FzfHistory:']
-on_func = ['fzf#run', 'fzf#wrap']
-depends = ['fzf']
-hook_add = '''
-let g:fzf_command_prefix = "Fzf"
-'''
-hook_source = 'call SourceMyRC("fzf.rc.vim")'
+repo = 'liuchengxu/vim-clap'
+on_cmd = 'Clap'
+on_func = 'clap#installer#force_download()'
+hook_post_update = 'call clap#installer#force_download()'
+hook_source = 'call SourceMyRC("clap.rc.vim")'
 
 [[plugins]]
 repo = 'Shougo/deol.nvim'
