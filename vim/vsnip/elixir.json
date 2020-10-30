@@ -1,0 +1,23 @@
+{
+  "Module": {
+    "prefix": "defmodule",
+    "body": [
+      "defmodule $0 do",
+      "end"
+    ]
+  },
+  "Function": {
+    "prefix": "def",
+    "body": [
+      "def $0() do",
+      "end"
+    ]
+  },
+  "PrivateFunction": {
+    "prefix": "defp",
+    "body": [
+      "defp $0() do",
+      "end"
+    ]
+  }
+}
