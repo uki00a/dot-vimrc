@@ -53,12 +53,13 @@ on_source = 'vim-lsp'
 repo = 'hrsh7th/vim-vsnip'
 on_cmd = ['VsnipOpen']
 on_func = 'vsnip#expandable'
+depends = 'asyncomplete.vim'
 hook_source = 'call SourceMyRC("vim-vsnip.rc.vim")'
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip-integ'
 depends = 'vim-vsnip'
-on_source = 'asyncomplete.vim'
+lazy = 1
 
 [[plugins]]
 repo = 'dense-analysis/ale'
@@ -66,12 +67,14 @@ on_cmd = ['ALEFix', 'ALEFixSuggest', 'ALELint', 'ALEToggle', 'ALEEnable', 'ALETo
 on_func = 'ale#completion#OmniFunc'
 hook_source = 'call SourceMyRC("ale.rc.vim")'
 depends = ['asyncomplete.vim', 'vim-deno']
-on_source = 'asyncomplete.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
 on_func = 'asyncomplete#enable_for_buffer'
+on_i = 1
+depends = 'vim-vsnip-integ'
 hook_source = 'call SourceMyRC("asyncomplete.rc.vim")'
+hook_post_source = 'call asyncomplete#enable_for_buffer()'
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
