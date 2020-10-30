@@ -22,5 +22,13 @@
       "}"
     ],
     "description": "..."
+  },
+  "If": {
+    "prefix": "if",
+    "body": [
+      "if $0 {",
+      "}"
+    ],
+    "description": "..."
   }
 }
