@@ -200,6 +200,8 @@ nmap <silent> [lsp]d :<C-u>call lsp#disable()<CR>
 " ale
 nmap <silent> [ale]l <Plug>(ale_lint)
 nmap <silent> [ale]f <Plug>(ale_fix)
+nmap <silent> [ale]n <Plug>(ale_next)
+nmap <silent> [ale]r :<C-u>ALERename<CR>
 
 " deol
 nnoremap <silent> [shell]o :<C-u>Deol zsh -split=vertical<CR>
