@@ -19,5 +19,13 @@
       "defp $0() do",
       "end"
     ]
+  },
+  "Block": {
+    "prefix": "do",
+    "body": [
+      "do",
+      "  $0",
+      "end"
+    ]
   }
 }
