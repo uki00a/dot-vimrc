@@ -5,7 +5,7 @@ let g:ale_lint_on_insert_leave = 0
 let g:ale_linters_explicit = 1
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'typescript': s:has_deno ? ['deno', 'deno-tsserver'] : ['eslint', 'tsserver'],
+\   'typescript': s:has_deno ? ['deno'] : ['eslint'],
 \   'vue': ['eslint']
 \ }
 let g:ale_lint_delay = 2000
