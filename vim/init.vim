@@ -80,9 +80,7 @@ function! s:load_matchit()
 endfunction
 
 function! s:on_typescript() abort
-  ALEEnable
-  map <buffer> <C-]> <Plug>(ale_go_to_definition)
-  map <buffer> <C-]> <Plug>(ale_go_to_definition)
+  map <buffer> <C-]> <Plug>(lsp-definition)
   imap <buffer> <C-Space> <Plug>(asyncomplete_force_refresh) 
 endfunction
 
