@@ -194,6 +194,8 @@ nnoremap <silent> [git]p :<C-u>Gina push<CR>
 " vim-lsp
 nmap <silent> [lsp]e :<C-u>call <SID>EnableLsp()<CR>
 nmap <silent> [lsp]d :<C-u>call lsp#disable()<CR>
+nmap <silent> [lsp]h <Plug>(lsp-hover)
+nmap <silent> [lsp]r <Plug>(lsp-references)
 
 " ale
 nmap <silent> [ale]l <Plug>(ale_lint)
