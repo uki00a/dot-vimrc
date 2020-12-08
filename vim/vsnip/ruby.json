@@ -22,5 +22,26 @@
       "end"
     ],
     "description": "..."
+  },
+  "Describe": {
+    "prefix": "describe",
+    "body": [
+      "describe \"$0\" do",
+      "end"
+    ]
+  },
+  "It": {
+    "prefix": "it",
+    "body": [
+      "it \"$0\" do",
+      "end"
+    ]
+  },
+  "Context": {
+    "prefix": "context",
+    "body": [
+      "context \"$0\" do",
+      "end"
+    ]
   }
 }
