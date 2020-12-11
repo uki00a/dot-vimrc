@@ -1,5 +1,6 @@
 {
     "typescript.disableAutomaticTypeAcquisition": true,
+    "terminal.integrated.shell.linux": "/bin/zsh",
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
     "extensions.autoUpdate": false,
