@@ -176,6 +176,7 @@ nmap <Leader>a [ale]
 nmap <Leader>s [shell]
 
 " clap
+nnoremap <silent> <C-u> :<C-u>Clap history<CR>
 nnoremap <silent> [ff]f :<C-u>Clap history<CR>
 nnoremap <silent> [ff]b :<C-u>Clap buffers<CR>
 " TODO Use ag
