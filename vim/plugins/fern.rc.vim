@@ -4,5 +4,5 @@ augroup fern-custom
 augroup END
 
 function! s:init_fern() abort
-  nmap <buffer><nowait> <Return> <Plug>(fern-action-expand)
+  nmap <buffer><nowait> <Return> <Plug>(fern-action-open-or-expand)
 endfunction
