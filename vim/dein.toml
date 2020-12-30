@@ -92,6 +92,10 @@ repo = 'Shougo/deol.nvim'
 on_cmd = 'Deol'
 
 [[plugins]]
+repo = 'lambdalisue/fern.vim'
+on_cmd = 'Fern'
+
+[[plugins]]
 repo = 'simeji/winresizer'
 on_cmd = 'WinResizerStartResize'
 

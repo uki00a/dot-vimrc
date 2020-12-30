@@ -207,8 +207,13 @@ nmap <silent> [ale]r :<C-u>ALERename<CR>
 " deol
 nnoremap <silent> [shell]o :<C-u>Deol zsh -split=vertical<CR>
 
+" fern.vim
+nnoremap <C-b> :<C-u>Fern . -drawer -toggle<CR>
+
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-n> <C-x><C-n>
 imap <expr> <C-j> vsnip#expandable() ? "<Plug>(vsnip-expand)" : "<C-j>"
 nnoremap <silent> <C-e> :<C-u>WinResizerStartResize<CR>
+nnoremap <C-p> <PageUp>
+nnoremap <C-n> <PageDown>
 " key mappings }}}
