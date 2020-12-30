@@ -85,7 +85,11 @@ function! s:on_typescript() abort
 endfunction
 
 function! s:on_golang() abort
-  map <buffer> gd <plug>(lsp-definition)
+  map <buffer> <C-]> <plug>(lsp-definition)
+endfunction
+
+function! s:on_rust() abort
+  map <buffer> <C-]> <plug>(lsp-definition)
 endfunction
 
 function! s:on_lisp() abort
@@ -132,6 +136,11 @@ augroup Golang
   autocmd!
   autocmd FileType go setlocal noexpandtab
   autocmd FileType go call s:on_golang()
+augroup END
+
+augroup Rust
+  autocmd!
+  autocmd FileType rust call s:on_rust()
 augroup END
 
 augroup CommonLisp

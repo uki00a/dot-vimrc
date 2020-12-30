@@ -1,12 +1,13 @@
 let g:lsp_signs_error = {"text": "💩"}
 let g:lsp_signs_warning = {"text": "🥺"}
+
 if executable("gopls")
   augroup LspGo
     autocmd!
     autocmd User lsp_setup call lsp#register_server({
     \ "name": "go-lang",
     \ "cmd": {server_info -> ["gopls"]},
-    \ "whitelist": ["go"],
+    \ "allowlist": ["go"],
     \ "workspace_config": {
     \   "gopls": {
     \     "staticcheck": v:true,
@@ -21,6 +22,17 @@ if executable("gopls")
   augroup END
 endif
 
+if executable("rust-analyzer")
+  augroup LspRust
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+    \ "name": "rust-analyzer",
+    \ "cmd": {server_info-> ["rust-analyzer"]},
+    \ "allowlist": ["rust"],
+    \ })
+  augroup END
+endif
+
 if executable("deno")
   augroup LspTypeScript
     autocmd!
@@ -28,7 +40,7 @@ if executable("deno")
     \ "name": "deno lsp",
     \ "cmd": {server_info -> ["deno", "lsp"]},
     \ "root_uri": {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), "tsconfig.json"))},
-    \ "whitelist": ["typescript", "typescript.tsx"],
+    \ "allowlist": ["typescript", "typescript.tsx"],
     \ })
   augroup END
 elseif executable("typescript-language-server")
@@ -44,7 +56,7 @@ elseif executable("typescript-language-server")
     \ "name": "typescript-language-server",
     \ "cmd": {server_info -> ["typescript-language-server", "--stdio"]},
     \ "root_uri": {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-    \ "whitelist": ["typescript", "typescript.tsx"],
+    \ "allowlist": ["typescript", "typescript.tsx"],
     \ "initialization_options": { "plugins": s:plugins },
     \ })
   augroup END
