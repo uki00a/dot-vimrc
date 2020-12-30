@@ -34,9 +34,9 @@ build = 'npm install'
 hook_post_source = 'call deno#ale#AddFixer()'
 
 [[plugins]]
-repo = 'cocopon/iceberg.vim'
-  hook_add = '''
-  autocmd MyAutoCmd VimEnter * nested colorscheme iceberg
+repo = 'lifepillar/vim-solarized8'
+hook_add = '''
+  autocmd MyAutoCmd VimEnter * nested colorscheme solarized8
 '''
 
 [[plugins]]
