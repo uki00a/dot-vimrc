@@ -94,6 +94,7 @@ on_cmd = 'Deol'
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 on_cmd = 'Fern'
+hook_source = 'call SourceMyRC("fern.rc.vim")'
 
 [[plugins]]
 repo = 'simeji/winresizer'
