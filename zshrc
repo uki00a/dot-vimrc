@@ -29,7 +29,7 @@ bindkey -e
 export GOPATH=$HOME/go
 export DENO_DIR=$HOME/.cache/deno
 export DENO_INSTALL_ROOT=$HOME/.deno
-export PATH=$PATH:$GOPATH/bin:$DENO_INSTALL_ROOT/bin:$HOME/bin
+export PATH=$PATH:$GOPATH/bin:$DENO_INSTALL_ROOT/bin:$HOME/.roswell/bin:$HOME/bin
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias egrep='egrep --color=auto'
