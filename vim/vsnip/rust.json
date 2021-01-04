@@ -1,0 +1,30 @@
+{
+  "Function": {
+    "prefix": "fn",
+    "body": [
+      "fn $0() {",
+      "}"
+    ]
+  },
+  "If": {
+    "prefix": "if",
+    "body": [
+      "if $0 {",
+      "}"
+    ]
+  },
+  "For": {
+    "prefix": "for",
+    "body": [
+      "for $0 {",
+      "}"
+    ]
+  },
+  "Match": {
+    "prefix": "match",
+    "body": [
+      "match $0 {",
+      "}"
+    ]
+  }
+}
