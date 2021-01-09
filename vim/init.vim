@@ -225,4 +225,6 @@ imap <expr> <C-j> vsnip#expandable() ? "<Plug>(vsnip-expand)" : "<C-j>"
 nnoremap <silent> <C-e> :<C-u>WinResizerStartResize<CR>
 nnoremap <C-p> <PageUp>
 nnoremap <C-n> <PageDown>
+
+vnoremap <C-c> "+y
 " key mappings }}}
