@@ -38,7 +38,9 @@ alias grep='grep --color=auto'
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
-alias ls='ls --color=auto'
+if [ "$(uname)" != 'Darwin' ]; then
+  alias ls='ls --color=auto'
+fi
 alias ghq-go='GHQ_ROOT=$GOPATH/src/github.com/uki00a ghq list'
 
 if [ -e $HOME/.asdf/asdf.sh ]; then
