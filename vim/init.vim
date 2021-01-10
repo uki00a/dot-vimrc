@@ -215,6 +215,7 @@ nmap <silent> [ale]r :<C-u>ALERename<CR>
 
 " deol
 nnoremap <silent> [shell]o :<C-u>Deol zsh -split=vertical<CR>
+nmap <silent> [shell]n <Plug>(deol_bg)
 
 " fern.vim
 nnoremap <C-b> :<C-u>Fern . -drawer -toggle<CR>
