@@ -1,0 +1,4 @@
+# https://github.com/jesseduffield/lazydocker/blob/master/docs/Config.md
+# https://godoc.org/github.com/jesseduffield/lazydocker/pkg/config
+update:
+  dockerRefreshInterval: 30m
