@@ -26,5 +26,19 @@
       "match $0 {",
       "}"
     ]
+  },
+  "Struct": {
+    "prefix": "struct",
+    "body": [
+      "struct $0 {",
+      "}"
+    ]
+  },
+  "Impl": {
+    "prefix": "impl",
+    "body": [
+      "impl $0 {",
+      "}"
+    ]
   }
 }
