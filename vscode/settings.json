@@ -5,5 +5,7 @@
     "editor.tabSize": 2,
     "extensions.autoUpdate": false,
     "breadcrumbs.enabled": false,
+    "git.autofetchPeriod": 1800,
+    "git.autorefresh": false,
     "workbench.colorTheme": "Solarized Dark"
 }
