@@ -206,9 +206,9 @@ nmap <silent> [lsp]e :<C-u>call <SID>EnableLsp()<CR>
 nmap <silent> [lsp]d :<C-u>call lsp#disable()<CR>
 nmap <silent> [lsp]h <Plug>(lsp-hover)
 nmap <silent> [lsp]r <Plug>(lsp-references)
-nmap <silent> [lsp]f :<C-u>LspDocumentFormat
-nmap <silent> [lsp]n :<C-u>LspNextDiagnostic
-nmap <silent> [lsp]r :<C-u>LspRename
+nmap <silent> [lsp]f :<C-u>LspDocumentFormat<CR>
+nmap <silent> [lsp]n :<C-u>LspNextDiagnostic<CR>
+nmap <silent> [lsp]r :<C-u>LspRename<CR>
 
 " deol
 nnoremap <silent> [shell]o :<C-u>Deol zsh -split=vertical<CR>
