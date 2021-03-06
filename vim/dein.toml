@@ -60,13 +60,6 @@ depends = 'vim-vsnip'
 lazy = 1
 
 [[plugins]]
-repo = 'dense-analysis/ale'
-on_cmd = ['ALEFix', 'ALEFixSuggest', 'ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
-on_func = 'ale#completion#OmniFunc'
-hook_source = 'call SourceMyRC("ale.rc.vim")'
-depends = ['asyncomplete.vim', 'vim-deno']
-
-[[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
 on_func = 'asyncomplete#enable_for_buffer'
 on_i = 1
