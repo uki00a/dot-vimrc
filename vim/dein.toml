@@ -43,6 +43,10 @@ on_func = 'lsp#enable'
 hook_source = 'call SourceMyRC("lsp.rc.vim")'
 
 [[plugins]]
+repo = 'mattn/vim-lsp-settings'
+on_source = 'vim-lsp'
+
+[[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
 depends = 'asyncomplete.vim'
 on_source = 'vim-lsp'
