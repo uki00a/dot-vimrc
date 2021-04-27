@@ -7,5 +7,6 @@
     "breadcrumbs.enabled": false,
     "git.autofetchPeriod": 1800,
     "git.autorefresh": false,
+    "workbench.panel.defaultLocation": "right",
     "workbench.colorTheme": "Solarized Dark"
 }
