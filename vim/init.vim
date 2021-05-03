@@ -200,6 +200,7 @@ nnoremap <silent> [git]s :<C-u>Gina status --opener=split<CR>
 nnoremap <silent> [git]d :<C-u>Gina diff --opener=split<CR>
 nnoremap <silent> [git]c :<C-u>Gina commit<CR>
 nnoremap <silent> [git]p :<C-u>Gina push<CR>
+nnoremap <silent> [git]l :<C-u>Gina log --opener=split<CR>
 
 " vim-lsp
 nmap <silent> [lsp]e :<C-u>call <SID>EnableLsp()<CR>
