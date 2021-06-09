@@ -3,6 +3,8 @@ function! SourceMyRC(rc_file) abort
   let path = fnamemodify($MYVIMRC, ':h') . '/plugins/' . a:rc_file
   execute 'source ' . path
 endfunction
+
+call SourceMyRC("airline.rc.vim")
 '''
 
 [[plugins]]
@@ -94,6 +96,12 @@ hook_source = 'call SourceMyRC("fern.rc.vim")'
 [[plugins]]
 repo = 'simeji/winresizer'
 on_cmd = 'WinResizerStartResize'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
