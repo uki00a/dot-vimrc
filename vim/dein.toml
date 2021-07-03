@@ -99,6 +99,7 @@ on_cmd = 'WinResizerStartResize'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+depends = 'denops-pomodoro.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
